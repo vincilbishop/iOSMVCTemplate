@@ -1,0 +1,10 @@
+platform :ios, '7.0'
+inhibit_all_warnings!
+
+pod 'ObjectiveSugar', '~> 0.5'
+
+
+target :RevelExModelTests do
+  pod 'OCMock', '~> 2.0.1'
+  pod 'XCAsyncTestCase'
+end

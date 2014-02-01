@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.base</string>
+		<string>com.apple.dt.unit.iPhoneBase</string>
+	</array>
+	<key>Components</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>com.apple.dt.unit.cocoaTouchFrameworkUnitTestBundle</string>
+			<key>Name</key>
+			<string>___PACKAGENAME___Tests</string>
+		</dict>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Definitions</key>
+	<dict>
+		<key>../Podfile</key>
+		<string>platform :ios, &apos;7.0&apos;
+inhibit_all_warnings!
+
+# Add references to your other development podspecs here.
+# Make sure that your development podspecs come first in case they are not in the 
+# cocoapods specs repo so cocoapods will know to look first in the :path =&gt; provided. 
+
+# This is a great way to provide a strict MVC separation.
+# Consider creating a separate library each for Model, View, and Controller
+# Then linking them together through a podfile in the view, and development podspec paths.
+# pod &apos;YOUR_CUSTOM_MODEL_PODSPEC_HERE&quot;, :path =&gt; &apos;../../Model/YOUR_CUSTOM_MODEL_PROJECT_DIRECTORY_HERE&apos;
+# pod &apos;YOUR_CUSTOM_COMMON_PODSPEC_HERE&quot;, :path =&gt; &apos;../../Common/YOUR_CUSTOM_COMMON_PROJECT_DIRECTORY_HERE&apos;
+
+# Add other cocoapod goodness as necessary.
+# pod &apos;CocoaLumberjack&apos;
+
+target :___PACKAGENAME___Tests do
+  # pod &apos;OCMock&apos;, &apos;~&gt; 2.0.1&apos;
+  # pod &apos;XCTAsyncTestCase&apos;
+end</string>
+		<key>../___PACKAGENAME___.podspec</key>
+		<string>Pod::Spec.new do |s|
+  s.name         = &apos;___PACKAGENAME___&apos;
+  s.version      = &apos;1.0.0&apos;                                                                  
+  s.summary      = &apos;A library that retrieves the current price of your favorite ice cream.&apos; 
+  s.author       = { &apos;___FULLUSERNAME___&apos; =&gt; &apos;YOUR_EMAIL_HERE&apos; }                            
+  s.source       = { :git =&gt; &apos;https://github.com/YOUR_GIT_ADDRESS_HERE&apos;, :tag =&gt; s.version.to_s }      
+  s.prefix_header_contents = &apos;#import &quot;___PROJECTNAMEASIDENTIFIER___.h&quot;&apos;
+  
+  s.source_files = &apos;___PROJECTNAMEASIDENTIFIER___/___PROJECTNAMEASIDENTIFIER___.h&apos;
+  
+  s.resource  = &quot;___PROJECTNAMEASIDENTIFIER___.podspec&quot;
+
+# Add references to your other development podspecs here.
+# Make sure that your development podspecs come first in the podfile 
+# that references this podspec, in case they are not in the 
+# cocoapods specs repo so cocoapods will know to look first in the :path =&gt; provided. 
+
+# This is a great way to provide a strict MVC separation.
+# Consider creating a separate library each for Model, View, and Controller
+# Then linking them together through a podfile in the view, and development podspec paths.  
+#  s.dependency  &apos;YOUR_CUSTOM_MODEL_PODSPEC_HERE&apos;
+#  s.dependency  &apos;CocoaLumberjack&apos;
+
+#  s.ios.frameworks = &apos;CFNetwork&apos;, &apos;Security&apos;, &apos;UIKit&apos;
+
+# Consider create subspecs for each of your controller or logic groups
+# this really helps with organizing the files into folders when included in a Pod
+# makes maintenance easier.
+  s.subspec &quot;MyFirstController&quot; do |sp|
+    sp.source_files = &apos;___PROJECTNAMEASIDENTIFIER___/MyFirstController*.{h,m}&apos;
+  end
+  
+  s.subspec &quot;MySecondController&quot; do |sp|
+    sp.source_files = &apos;___PROJECTNAMEASIDENTIFIER___/MySecondController*.{h,m}&apos;
+  end
+
+end</string>
+		<key>___PACKAGENAMEASIDENTIFIER___.h</key>
+		<dict>
+			<key>Path</key>
+			<string>___PACKAGENAMEASIDENTIFIER___.h</string>
+			<key>TargetIndices</key>
+			<array>
+				<integer>0</integer>
+			</array>
+		</dict>
+		<key>___PACKAGENAMEASIDENTIFIER___.m</key>
+		<dict>
+			<key>Path</key>
+			<string>___PACKAGENAMEASIDENTIFIER___.m</string>
+		</dict>
+		<key>___PACKAGENAME___-Prefix.pch:objC:importFoundation</key>
+		<string>#import &lt;Foundation/Foundation.h&gt;
+</string>
+	</dict>
+	<key>Description</key>
+	<string>This template builds a static library with a Podfile and Podspec.</string>
+	<key>Identifier</key>
+	<string>com.premosystems.cocoaTouchPodspecStaticLibrary</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Nodes</key>
+	<array>
+		<string>../Podfile</string>
+		<string>../___PACKAGENAME___.podspec</string>
+		<string>___PACKAGENAME___-Prefix.pch:objC:importFoundation</string>
+		<string>___PACKAGENAMEASIDENTIFIER___.h</string>
+		<string>___PACKAGENAMEASIDENTIFIER___.m</string>
+	</array>
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>Sources</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Frameworks</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>CopyFiles</string>
+					<key>DstPath</key>
+					<string>include/$(PRODUCT_NAME)</string>
+					<key>DstSubfolderSpec</key>
+					<integer>16</integer>
+				</dict>
+			</array>
+			<key>Frameworks</key>
+			<array>
+				<string>Foundation</string>
+			</array>
+			<key>ProductType</key>
+			<string>com.apple.product-type.library.static</string>
+			<key>SharedSettings</key>
+			<dict>
+				<key>DSTROOT</key>
+				<string>/tmp/___PACKAGENAMEASIDENTIFIER___.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>___PACKAGENAME___/___PACKAGENAME___-Prefix.pch</string>
+				<key>OTHER_LDFLAGS</key>
+				<string>-ObjC</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
