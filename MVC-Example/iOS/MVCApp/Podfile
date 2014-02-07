@@ -70,8 +70,6 @@ end
 target :ProximityApp, exclusive: true do
 	link_with 'ProximityApp', :project => 'ProximityApp'
 	
-	pod 'PhotonServeriOS', :path => '../ThirdParty/Photon-Server-iOS-SDK/'
-	
 	pod 'ProximityCommon', :path => 'Common/ProximityCommon'
 	pod 'ProximityModel', :path => 'Model/ProximityModel'
 	pod 'ProximityController', :path => 'Controller/ProximityController'
