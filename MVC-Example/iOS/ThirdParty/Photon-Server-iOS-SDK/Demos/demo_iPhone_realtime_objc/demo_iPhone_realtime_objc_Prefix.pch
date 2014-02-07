@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'demo_RT_iPhone_photon_objc' target in the 'demo_RT_iPhone_photon_objc' project
+//
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#endif

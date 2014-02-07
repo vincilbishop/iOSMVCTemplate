@@ -1,0 +1,697 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		E99AB59114C5BC8700F08070 /* build all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E99AB59214C5BC8700F08070 /* Build configuration list for PBXAggregateTarget "build all" */;
+			buildPhases = (
+			);
+			dependencies = (
+				E99AB5BA14C5C4F300F08070 /* PBXTargetDependency */,
+				E99AB5BC14C5C4F300F08070 /* PBXTargetDependency */,
+			);
+			name = "build all";
+			productName = "build all";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		8406A16217BAB20E00644BD0 /* PlayerMovementInformant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8406A16117BAB20E00644BD0 /* PlayerMovementInformant.cpp */; };
+		8406A16317BAB20E00644BD0 /* PlayerMovementInformant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8406A16117BAB20E00644BD0 /* PlayerMovementInformant.cpp */; };
+		849B108B1757A7DC0059D4AC /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10781757A7DC0059D4AC /* Client.cpp */; };
+		849B108C1757A7DC0059D4AC /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10781757A7DC0059D4AC /* Client.cpp */; };
+		849B108D1757A7DC0059D4AC /* MutablePlayerFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B107A1757A7DC0059D4AC /* MutablePlayerFactory.cpp */; };
+		849B108E1757A7DC0059D4AC /* MutablePlayerFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B107A1757A7DC0059D4AC /* MutablePlayerFactory.cpp */; };
+		849B108F1757A7DC0059D4AC /* MutableRoomFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B107B1757A7DC0059D4AC /* MutableRoomFactory.cpp */; };
+		849B10901757A7DC0059D4AC /* MutableRoomFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B107B1757A7DC0059D4AC /* MutableRoomFactory.cpp */; };
+		849B10911757A7DC0059D4AC /* PlayerFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B107C1757A7DC0059D4AC /* PlayerFactory.cpp */; };
+		849B10921757A7DC0059D4AC /* PlayerFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B107C1757A7DC0059D4AC /* PlayerFactory.cpp */; };
+		849B10951757A7DC0059D4AC /* PlayerPropertiesCacher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B107E1757A7DC0059D4AC /* PlayerPropertiesCacher.cpp */; };
+		849B10961757A7DC0059D4AC /* PlayerPropertiesCacher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B107E1757A7DC0059D4AC /* PlayerPropertiesCacher.cpp */; };
+		849B10971757A7DC0059D4AC /* PlayerPropertiesUpdateInformant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B107F1757A7DC0059D4AC /* PlayerPropertiesUpdateInformant.cpp */; };
+		849B10981757A7DC0059D4AC /* PlayerPropertiesUpdateInformant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B107F1757A7DC0059D4AC /* PlayerPropertiesUpdateInformant.cpp */; };
+		849B10991757A7DC0059D4AC /* RoomFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10801757A7DC0059D4AC /* RoomFactory.cpp */; };
+		849B109A1757A7DC0059D4AC /* RoomFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10801757A7DC0059D4AC /* RoomFactory.cpp */; };
+		849B109B1757A7DC0059D4AC /* RoomPropertiesCacher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10811757A7DC0059D4AC /* RoomPropertiesCacher.cpp */; };
+		849B109C1757A7DC0059D4AC /* RoomPropertiesCacher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10811757A7DC0059D4AC /* RoomPropertiesCacher.cpp */; };
+		849B109D1757A7DC0059D4AC /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10821757A7DC0059D4AC /* Utils.cpp */; };
+		849B109E1757A7DC0059D4AC /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10821757A7DC0059D4AC /* Utils.cpp */; };
+		849B10A51757A7DC0059D4AC /* MutablePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10861757A7DC0059D4AC /* MutablePlayer.cpp */; };
+		849B10A61757A7DC0059D4AC /* MutablePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10861757A7DC0059D4AC /* MutablePlayer.cpp */; };
+		849B10A71757A7DC0059D4AC /* MutableRoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10871757A7DC0059D4AC /* MutableRoom.cpp */; };
+		849B10A81757A7DC0059D4AC /* MutableRoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10871757A7DC0059D4AC /* MutableRoom.cpp */; };
+		849B10A91757A7DC0059D4AC /* Peer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10881757A7DC0059D4AC /* Peer.cpp */; };
+		849B10AA1757A7DC0059D4AC /* Peer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10881757A7DC0059D4AC /* Peer.cpp */; };
+		849B10AB1757A7DC0059D4AC /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10891757A7DC0059D4AC /* Player.cpp */; };
+		849B10AC1757A7DC0059D4AC /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10891757A7DC0059D4AC /* Player.cpp */; };
+		849B10AD1757A7DC0059D4AC /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B108A1757A7DC0059D4AC /* Room.cpp */; };
+		849B10AE1757A7DC0059D4AC /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B108A1757A7DC0059D4AC /* Room.cpp */; };
+		849B10CE1757A80F0059D4AC /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10AF1757A80F0059D4AC /* Client.h */; };
+		849B10CF1757A80F0059D4AC /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10AF1757A80F0059D4AC /* Client.h */; };
+		849B10D41757A80F0059D4AC /* EventCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B51757A80F0059D4AC /* EventCode.h */; };
+		849B10D51757A80F0059D4AC /* EventCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B51757A80F0059D4AC /* EventCode.h */; };
+		849B10D61757A80F0059D4AC /* JoinType.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B61757A80F0059D4AC /* JoinType.h */; };
+		849B10D71757A80F0059D4AC /* JoinType.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B61757A80F0059D4AC /* JoinType.h */; };
+		849B10D81757A80F0059D4AC /* OperationCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B71757A80F0059D4AC /* OperationCode.h */; };
+		849B10D91757A80F0059D4AC /* OperationCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B71757A80F0059D4AC /* OperationCode.h */; };
+		849B10DA1757A80F0059D4AC /* ParameterCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B81757A80F0059D4AC /* ParameterCode.h */; };
+		849B10DB1757A80F0059D4AC /* ParameterCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B81757A80F0059D4AC /* ParameterCode.h */; };
+		849B10DC1757A80F0059D4AC /* Player.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10BA1757A80F0059D4AC /* Player.h */; };
+		849B10DD1757A80F0059D4AC /* Player.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10BA1757A80F0059D4AC /* Player.h */; };
+		849B10DE1757A80F0059D4AC /* Room.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10BB1757A80F0059D4AC /* Room.h */; };
+		849B10DF1757A80F0059D4AC /* Room.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10BB1757A80F0059D4AC /* Room.h */; };
+		849B10E01757A80F0059D4AC /* MutablePlayerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10BC1757A80F0059D4AC /* MutablePlayerFactory.h */; };
+		849B10E11757A80F0059D4AC /* MutablePlayerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10BC1757A80F0059D4AC /* MutablePlayerFactory.h */; };
+		849B10E21757A80F0059D4AC /* MutableRoomFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10BD1757A80F0059D4AC /* MutableRoomFactory.h */; };
+		849B10E31757A80F0059D4AC /* MutableRoomFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10BD1757A80F0059D4AC /* MutableRoomFactory.h */; };
+		849B10E41757A80F0059D4AC /* PlayerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10BE1757A80F0059D4AC /* PlayerFactory.h */; };
+		849B10E51757A80F0059D4AC /* PlayerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10BE1757A80F0059D4AC /* PlayerFactory.h */; };
+		849B10E61757A80F0059D4AC /* PlayerMovementInformant.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10BF1757A80F0059D4AC /* PlayerMovementInformant.h */; };
+		849B10E71757A80F0059D4AC /* PlayerMovementInformant.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10BF1757A80F0059D4AC /* PlayerMovementInformant.h */; };
+		849B10E81757A80F0059D4AC /* PlayerPropertiesCacher.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C01757A80F0059D4AC /* PlayerPropertiesCacher.h */; };
+		849B10E91757A80F0059D4AC /* PlayerPropertiesCacher.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C01757A80F0059D4AC /* PlayerPropertiesCacher.h */; };
+		849B10EA1757A80F0059D4AC /* PlayerPropertiesUpdateInformant.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C11757A80F0059D4AC /* PlayerPropertiesUpdateInformant.h */; };
+		849B10EB1757A80F0059D4AC /* PlayerPropertiesUpdateInformant.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C11757A80F0059D4AC /* PlayerPropertiesUpdateInformant.h */; };
+		849B10EC1757A80F0059D4AC /* RoomFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C21757A80F0059D4AC /* RoomFactory.h */; };
+		849B10ED1757A80F0059D4AC /* RoomFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C21757A80F0059D4AC /* RoomFactory.h */; };
+		849B10EE1757A80F0059D4AC /* RoomPropertiesCacher.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C31757A80F0059D4AC /* RoomPropertiesCacher.h */; };
+		849B10EF1757A80F0059D4AC /* RoomPropertiesCacher.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C31757A80F0059D4AC /* RoomPropertiesCacher.h */; };
+		849B10F01757A80F0059D4AC /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C41757A80F0059D4AC /* Utils.h */; };
+		849B10F11757A80F0059D4AC /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C41757A80F0059D4AC /* Utils.h */; };
+		849B10F21757A80F0059D4AC /* Listener.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C51757A80F0059D4AC /* Listener.h */; };
+		849B10F31757A80F0059D4AC /* Listener.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C51757A80F0059D4AC /* Listener.h */; };
+		849B10FA1757A80F0059D4AC /* MutablePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C91757A80F0059D4AC /* MutablePlayer.h */; };
+		849B10FB1757A80F0059D4AC /* MutablePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C91757A80F0059D4AC /* MutablePlayer.h */; };
+		849B10FC1757A80F0059D4AC /* MutableRoom.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10CA1757A80F0059D4AC /* MutableRoom.h */; };
+		849B10FD1757A80F0059D4AC /* MutableRoom.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10CA1757A80F0059D4AC /* MutableRoom.h */; };
+		849B10FE1757A80F0059D4AC /* Peer.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10CB1757A80F0059D4AC /* Peer.h */; };
+		849B10FF1757A80F0059D4AC /* Peer.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10CB1757A80F0059D4AC /* Peer.h */; };
+		849B11001757A80F0059D4AC /* Player.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10CC1757A80F0059D4AC /* Player.h */; };
+		849B11011757A80F0059D4AC /* Player.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10CC1757A80F0059D4AC /* Player.h */; };
+		849B11021757A80F0059D4AC /* Room.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10CD1757A80F0059D4AC /* Room.h */; };
+		849B11031757A80F0059D4AC /* Room.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10CD1757A80F0059D4AC /* Room.h */; };
+		84B68BFB1732EADF007AFBE4 /* FriendInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84B68BFA1732EADF007AFBE4 /* FriendInfo.cpp */; };
+		84B68BFC1732EADF007AFBE4 /* FriendInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84B68BFA1732EADF007AFBE4 /* FriendInfo.cpp */; };
+		84B68C021732EB0A007AFBE4 /* FriendInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B68C011732EB0A007AFBE4 /* FriendInfo.h */; };
+		84B68C031732EB0A007AFBE4 /* FriendInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B68C011732EB0A007AFBE4 /* FriendInfo.h */; };
+		84BFB8F4176B57E7001C86E1 /* AuthenticationValues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB8F3176B57E7001C86E1 /* AuthenticationValues.cpp */; };
+		84BFB8F5176B57E7001C86E1 /* AuthenticationValues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB8F3176B57E7001C86E1 /* AuthenticationValues.cpp */; };
+		84BFB8F8176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB8F7176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp */; };
+		84BFB8F9176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB8F7176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp */; };
+		84BFB8FB176B5818001C86E1 /* AuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB8FA176B5818001C86E1 /* AuthenticationValues.h */; };
+		84BFB8FC176B5818001C86E1 /* AuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB8FA176B5818001C86E1 /* AuthenticationValues.h */; };
+		84BFB8FF176B5827001C86E1 /* AuthenticationValuesSecretSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB8FD176B5827001C86E1 /* AuthenticationValuesSecretSetter.h */; };
+		84BFB900176B5827001C86E1 /* AuthenticationValuesSecretSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB8FD176B5827001C86E1 /* AuthenticationValuesSecretSetter.h */; };
+		84BFB95C176B5D0C001C86E1 /* CustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB95B176B5D0C001C86E1 /* CustomAuthenticationType.h */; };
+		84BFB95D176B5D0C001C86E1 /* CustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB95B176B5D0C001C86E1 /* CustomAuthenticationType.h */; };
+		E99AB55F14C5B8C600F08070 /* ErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = E99AB54F14C5B8C600F08070 /* ErrorCode.h */; };
+		E99AB56014C5B8C600F08070 /* PeerStates.h in Headers */ = {isa = PBXBuildFile; fileRef = E99AB55014C5B8C600F08070 /* PeerStates.h */; };
+		E99AB5A814C5C40F00F08070 /* ErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = E99AB54F14C5B8C600F08070 /* ErrorCode.h */; };
+		E99AB5A914C5C40F00F08070 /* PeerStates.h in Headers */ = {isa = PBXBuildFile; fileRef = E99AB55014C5B8C600F08070 /* PeerStates.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E99AB5B914C5C4F300F08070 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E99AB53414C5B84300F08070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E99AB53C14C5B84300F08070;
+			remoteInfo = "LoadBalancing-cpp-iphone";
+		};
+		E99AB5BB14C5C4F300F08070 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E99AB53414C5B84300F08070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E99AB57814C5B90900F08070;
+			remoteInfo = "LoadBalancing-cpp-macos";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8406A16117BAB20E00644BD0 /* PlayerMovementInformant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerMovementInformant.cpp; sourceTree = "<group>"; };
+		849B10781757A7DC0059D4AC /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Client.cpp; sourceTree = "<group>"; };
+		849B107A1757A7DC0059D4AC /* MutablePlayerFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MutablePlayerFactory.cpp; sourceTree = "<group>"; };
+		849B107B1757A7DC0059D4AC /* MutableRoomFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MutableRoomFactory.cpp; sourceTree = "<group>"; };
+		849B107C1757A7DC0059D4AC /* PlayerFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerFactory.cpp; sourceTree = "<group>"; };
+		849B107E1757A7DC0059D4AC /* PlayerPropertiesCacher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerPropertiesCacher.cpp; sourceTree = "<group>"; };
+		849B107F1757A7DC0059D4AC /* PlayerPropertiesUpdateInformant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerPropertiesUpdateInformant.cpp; sourceTree = "<group>"; };
+		849B10801757A7DC0059D4AC /* RoomFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoomFactory.cpp; sourceTree = "<group>"; };
+		849B10811757A7DC0059D4AC /* RoomPropertiesCacher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoomPropertiesCacher.cpp; sourceTree = "<group>"; };
+		849B10821757A7DC0059D4AC /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		849B10861757A7DC0059D4AC /* MutablePlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MutablePlayer.cpp; sourceTree = "<group>"; };
+		849B10871757A7DC0059D4AC /* MutableRoom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MutableRoom.cpp; sourceTree = "<group>"; };
+		849B10881757A7DC0059D4AC /* Peer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Peer.cpp; sourceTree = "<group>"; };
+		849B10891757A7DC0059D4AC /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		849B108A1757A7DC0059D4AC /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Room.cpp; sourceTree = "<group>"; };
+		849B10AF1757A80F0059D4AC /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		849B10B51757A80F0059D4AC /* EventCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCode.h; sourceTree = "<group>"; };
+		849B10B61757A80F0059D4AC /* JoinType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinType.h; sourceTree = "<group>"; };
+		849B10B71757A80F0059D4AC /* OperationCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationCode.h; sourceTree = "<group>"; };
+		849B10B81757A80F0059D4AC /* ParameterCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterCode.h; sourceTree = "<group>"; };
+		849B10BA1757A80F0059D4AC /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		849B10BB1757A80F0059D4AC /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		849B10BC1757A80F0059D4AC /* MutablePlayerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutablePlayerFactory.h; sourceTree = "<group>"; };
+		849B10BD1757A80F0059D4AC /* MutableRoomFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutableRoomFactory.h; sourceTree = "<group>"; };
+		849B10BE1757A80F0059D4AC /* PlayerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerFactory.h; sourceTree = "<group>"; };
+		849B10BF1757A80F0059D4AC /* PlayerMovementInformant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMovementInformant.h; sourceTree = "<group>"; };
+		849B10C01757A80F0059D4AC /* PlayerPropertiesCacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerPropertiesCacher.h; sourceTree = "<group>"; };
+		849B10C11757A80F0059D4AC /* PlayerPropertiesUpdateInformant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerPropertiesUpdateInformant.h; sourceTree = "<group>"; };
+		849B10C21757A80F0059D4AC /* RoomFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomFactory.h; sourceTree = "<group>"; };
+		849B10C31757A80F0059D4AC /* RoomPropertiesCacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomPropertiesCacher.h; sourceTree = "<group>"; };
+		849B10C41757A80F0059D4AC /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		849B10C51757A80F0059D4AC /* Listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listener.h; sourceTree = "<group>"; };
+		849B10C91757A80F0059D4AC /* MutablePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutablePlayer.h; sourceTree = "<group>"; };
+		849B10CA1757A80F0059D4AC /* MutableRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutableRoom.h; sourceTree = "<group>"; };
+		849B10CB1757A80F0059D4AC /* Peer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Peer.h; sourceTree = "<group>"; };
+		849B10CC1757A80F0059D4AC /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		849B10CD1757A80F0059D4AC /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		84B68BFA1732EADF007AFBE4 /* FriendInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FriendInfo.cpp; sourceTree = "<group>"; };
+		84B68C011732EB0A007AFBE4 /* FriendInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendInfo.h; sourceTree = "<group>"; };
+		84BFB8F3176B57E7001C86E1 /* AuthenticationValues.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AuthenticationValues.cpp; sourceTree = "<group>"; };
+		84BFB8F7176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AuthenticationValuesSecretSetter.cpp; sourceTree = "<group>"; };
+		84BFB8FA176B5818001C86E1 /* AuthenticationValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationValues.h; sourceTree = "<group>"; };
+		84BFB8FD176B5827001C86E1 /* AuthenticationValuesSecretSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationValuesSecretSetter.h; sourceTree = "<group>"; };
+		84BFB95B176B5D0C001C86E1 /* CustomAuthenticationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAuthenticationType.h; sourceTree = "<group>"; };
+		E99AB53D14C5B84300F08070 /* libLoadBalancing-cpp_debug_iphoneos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLoadBalancing-cpp_debug_iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E99AB54F14C5B8C600F08070 /* ErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorCode.h; sourceTree = "<group>"; };
+		E99AB55014C5B8C600F08070 /* PeerStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerStates.h; sourceTree = "<group>"; };
+		E99AB57914C5B90900F08070 /* libLoadBalancing-cpp_debug_macosx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLoadBalancing-cpp_debug_macosx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E99AB53A14C5B84300F08070 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E99AB57614C5B90900F08070 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		849B10791757A7DC0059D4AC /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				84BFB8F7176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp */,
+				849B107A1757A7DC0059D4AC /* MutablePlayerFactory.cpp */,
+				849B107B1757A7DC0059D4AC /* MutableRoomFactory.cpp */,
+				849B107C1757A7DC0059D4AC /* PlayerFactory.cpp */,
+				8406A16117BAB20E00644BD0 /* PlayerMovementInformant.cpp */,
+				849B107E1757A7DC0059D4AC /* PlayerPropertiesCacher.cpp */,
+				849B107F1757A7DC0059D4AC /* PlayerPropertiesUpdateInformant.cpp */,
+				849B10801757A7DC0059D4AC /* RoomFactory.cpp */,
+				849B10811757A7DC0059D4AC /* RoomPropertiesCacher.cpp */,
+				849B10821757A7DC0059D4AC /* Utils.cpp */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		849B10B31757A80F0059D4AC /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				849B10B41757A80F0059D4AC /* Enums */,
+				84BFB8FD176B5827001C86E1 /* AuthenticationValuesSecretSetter.h */,
+				849B10BC1757A80F0059D4AC /* MutablePlayerFactory.h */,
+				849B10BD1757A80F0059D4AC /* MutableRoomFactory.h */,
+				849B10BE1757A80F0059D4AC /* PlayerFactory.h */,
+				849B10BF1757A80F0059D4AC /* PlayerMovementInformant.h */,
+				849B10C01757A80F0059D4AC /* PlayerPropertiesCacher.h */,
+				849B10C11757A80F0059D4AC /* PlayerPropertiesUpdateInformant.h */,
+				849B10C21757A80F0059D4AC /* RoomFactory.h */,
+				849B10C31757A80F0059D4AC /* RoomPropertiesCacher.h */,
+				849B10C41757A80F0059D4AC /* Utils.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		849B10B41757A80F0059D4AC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				84BFB95B176B5D0C001C86E1 /* CustomAuthenticationType.h */,
+				849B10B51757A80F0059D4AC /* EventCode.h */,
+				849B10B61757A80F0059D4AC /* JoinType.h */,
+				849B10B71757A80F0059D4AC /* OperationCode.h */,
+				849B10B81757A80F0059D4AC /* ParameterCode.h */,
+				849B10B91757A80F0059D4AC /* Properties */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		849B10B91757A80F0059D4AC /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				849B10BA1757A80F0059D4AC /* Player.h */,
+				849B10BB1757A80F0059D4AC /* Room.h */,
+			);
+			path = Properties;
+			sourceTree = "<group>";
+		};
+		E99AB53214C5B84300F08070 = {
+			isa = PBXGroup;
+			children = (
+				E99AB56C14C5B8D700F08070 /* src */,
+				E99AB54D14C5B8C600F08070 /* inc */,
+				E99AB53E14C5B84300F08070 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E99AB53E14C5B84300F08070 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E99AB53D14C5B84300F08070 /* libLoadBalancing-cpp_debug_iphoneos.a */,
+				E99AB57914C5B90900F08070 /* libLoadBalancing-cpp_debug_macosx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E99AB54D14C5B8C600F08070 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				E99AB54E14C5B8C600F08070 /* Enums */,
+				849B10B31757A80F0059D4AC /* Internal */,
+				84BFB8FA176B5818001C86E1 /* AuthenticationValues.h */,
+				849B10AF1757A80F0059D4AC /* Client.h */,
+				849B10C51757A80F0059D4AC /* Listener.h */,
+				849B10C91757A80F0059D4AC /* MutablePlayer.h */,
+				849B10CA1757A80F0059D4AC /* MutableRoom.h */,
+				849B10CB1757A80F0059D4AC /* Peer.h */,
+				849B10CC1757A80F0059D4AC /* Player.h */,
+				849B10CD1757A80F0059D4AC /* Room.h */,
+				84B68C011732EB0A007AFBE4 /* FriendInfo.h */,
+			);
+			path = inc;
+			sourceTree = "<group>";
+		};
+		E99AB54E14C5B8C600F08070 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E99AB54F14C5B8C600F08070 /* ErrorCode.h */,
+				E99AB55014C5B8C600F08070 /* PeerStates.h */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		E99AB56C14C5B8D700F08070 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				849B10791757A7DC0059D4AC /* Internal */,
+				84BFB8F3176B57E7001C86E1 /* AuthenticationValues.cpp */,
+				849B10781757A7DC0059D4AC /* Client.cpp */,
+				84B68BFA1732EADF007AFBE4 /* FriendInfo.cpp */,
+				849B10861757A7DC0059D4AC /* MutablePlayer.cpp */,
+				849B10871757A7DC0059D4AC /* MutableRoom.cpp */,
+				849B10881757A7DC0059D4AC /* Peer.cpp */,
+				849B10891757A7DC0059D4AC /* Player.cpp */,
+				849B108A1757A7DC0059D4AC /* Room.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E99AB53B14C5B84300F08070 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E99AB55F14C5B8C600F08070 /* ErrorCode.h in Headers */,
+				E99AB56014C5B8C600F08070 /* PeerStates.h in Headers */,
+				84B68C021732EB0A007AFBE4 /* FriendInfo.h in Headers */,
+				849B10CE1757A80F0059D4AC /* Client.h in Headers */,
+				849B10D41757A80F0059D4AC /* EventCode.h in Headers */,
+				849B10D61757A80F0059D4AC /* JoinType.h in Headers */,
+				849B10D81757A80F0059D4AC /* OperationCode.h in Headers */,
+				849B10DA1757A80F0059D4AC /* ParameterCode.h in Headers */,
+				849B10DC1757A80F0059D4AC /* Player.h in Headers */,
+				849B10DE1757A80F0059D4AC /* Room.h in Headers */,
+				849B10E01757A80F0059D4AC /* MutablePlayerFactory.h in Headers */,
+				849B10E21757A80F0059D4AC /* MutableRoomFactory.h in Headers */,
+				849B10E41757A80F0059D4AC /* PlayerFactory.h in Headers */,
+				849B10E61757A80F0059D4AC /* PlayerMovementInformant.h in Headers */,
+				849B10E81757A80F0059D4AC /* PlayerPropertiesCacher.h in Headers */,
+				849B10EA1757A80F0059D4AC /* PlayerPropertiesUpdateInformant.h in Headers */,
+				849B10EC1757A80F0059D4AC /* RoomFactory.h in Headers */,
+				849B10EE1757A80F0059D4AC /* RoomPropertiesCacher.h in Headers */,
+				849B10F01757A80F0059D4AC /* Utils.h in Headers */,
+				849B10F21757A80F0059D4AC /* Listener.h in Headers */,
+				849B10FA1757A80F0059D4AC /* MutablePlayer.h in Headers */,
+				849B10FC1757A80F0059D4AC /* MutableRoom.h in Headers */,
+				849B10FE1757A80F0059D4AC /* Peer.h in Headers */,
+				849B11001757A80F0059D4AC /* Player.h in Headers */,
+				849B11021757A80F0059D4AC /* Room.h in Headers */,
+				84BFB8FB176B5818001C86E1 /* AuthenticationValues.h in Headers */,
+				84BFB8FF176B5827001C86E1 /* AuthenticationValuesSecretSetter.h in Headers */,
+				84BFB95C176B5D0C001C86E1 /* CustomAuthenticationType.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E99AB57714C5B90900F08070 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E99AB5A814C5C40F00F08070 /* ErrorCode.h in Headers */,
+				E99AB5A914C5C40F00F08070 /* PeerStates.h in Headers */,
+				84B68C031732EB0A007AFBE4 /* FriendInfo.h in Headers */,
+				849B10CF1757A80F0059D4AC /* Client.h in Headers */,
+				849B10D51757A80F0059D4AC /* EventCode.h in Headers */,
+				849B10D71757A80F0059D4AC /* JoinType.h in Headers */,
+				849B10D91757A80F0059D4AC /* OperationCode.h in Headers */,
+				849B10DB1757A80F0059D4AC /* ParameterCode.h in Headers */,
+				849B10DD1757A80F0059D4AC /* Player.h in Headers */,
+				849B10DF1757A80F0059D4AC /* Room.h in Headers */,
+				849B10E11757A80F0059D4AC /* MutablePlayerFactory.h in Headers */,
+				849B10E31757A80F0059D4AC /* MutableRoomFactory.h in Headers */,
+				849B10E51757A80F0059D4AC /* PlayerFactory.h in Headers */,
+				849B10E71757A80F0059D4AC /* PlayerMovementInformant.h in Headers */,
+				849B10E91757A80F0059D4AC /* PlayerPropertiesCacher.h in Headers */,
+				849B10EB1757A80F0059D4AC /* PlayerPropertiesUpdateInformant.h in Headers */,
+				849B10ED1757A80F0059D4AC /* RoomFactory.h in Headers */,
+				849B10EF1757A80F0059D4AC /* RoomPropertiesCacher.h in Headers */,
+				849B10F11757A80F0059D4AC /* Utils.h in Headers */,
+				849B10F31757A80F0059D4AC /* Listener.h in Headers */,
+				849B10FB1757A80F0059D4AC /* MutablePlayer.h in Headers */,
+				849B10FD1757A80F0059D4AC /* MutableRoom.h in Headers */,
+				849B10FF1757A80F0059D4AC /* Peer.h in Headers */,
+				849B11011757A80F0059D4AC /* Player.h in Headers */,
+				849B11031757A80F0059D4AC /* Room.h in Headers */,
+				84BFB8FC176B5818001C86E1 /* AuthenticationValues.h in Headers */,
+				84BFB900176B5827001C86E1 /* AuthenticationValuesSecretSetter.h in Headers */,
+				84BFB95D176B5D0C001C86E1 /* CustomAuthenticationType.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E99AB53C14C5B84300F08070 /* LoadBalancing-cpp-iphone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E99AB54A14C5B84300F08070 /* Build configuration list for PBXNativeTarget "LoadBalancing-cpp-iphone" */;
+			buildPhases = (
+				E99AB53914C5B84300F08070 /* Sources */,
+				E99AB53A14C5B84300F08070 /* Frameworks */,
+				E99AB53B14C5B84300F08070 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LoadBalancing-cpp-iphone";
+			productName = "LoadBalancing-cpp";
+			productReference = E99AB53D14C5B84300F08070 /* libLoadBalancing-cpp_debug_iphoneos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E99AB57814C5B90900F08070 /* LoadBalancing-cpp-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E99AB58714C5B90900F08070 /* Build configuration list for PBXNativeTarget "LoadBalancing-cpp-macos" */;
+			buildPhases = (
+				E99AB57514C5B90900F08070 /* Sources */,
+				E99AB57614C5B90900F08070 /* Frameworks */,
+				E99AB57714C5B90900F08070 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LoadBalancing-cpp-macos";
+			productName = "LoadBalancing-cpp-macos";
+			productReference = E99AB57914C5B90900F08070 /* libLoadBalancing-cpp_debug_macosx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E99AB53414C5B84300F08070 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = E99AB53714C5B84300F08070 /* Build configuration list for PBXProject "LoadBalancing-cpp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E99AB53214C5B84300F08070;
+			productRefGroup = E99AB53E14C5B84300F08070 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E99AB53C14C5B84300F08070 /* LoadBalancing-cpp-iphone */,
+				E99AB57814C5B90900F08070 /* LoadBalancing-cpp-macos */,
+				E99AB59114C5BC8700F08070 /* build all */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E99AB53914C5B84300F08070 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B68BFB1732EADF007AFBE4 /* FriendInfo.cpp in Sources */,
+				849B108B1757A7DC0059D4AC /* Client.cpp in Sources */,
+				849B108D1757A7DC0059D4AC /* MutablePlayerFactory.cpp in Sources */,
+				849B108F1757A7DC0059D4AC /* MutableRoomFactory.cpp in Sources */,
+				849B10911757A7DC0059D4AC /* PlayerFactory.cpp in Sources */,
+				849B10951757A7DC0059D4AC /* PlayerPropertiesCacher.cpp in Sources */,
+				849B10971757A7DC0059D4AC /* PlayerPropertiesUpdateInformant.cpp in Sources */,
+				849B10991757A7DC0059D4AC /* RoomFactory.cpp in Sources */,
+				849B109B1757A7DC0059D4AC /* RoomPropertiesCacher.cpp in Sources */,
+				849B109D1757A7DC0059D4AC /* Utils.cpp in Sources */,
+				849B10A51757A7DC0059D4AC /* MutablePlayer.cpp in Sources */,
+				849B10A71757A7DC0059D4AC /* MutableRoom.cpp in Sources */,
+				849B10A91757A7DC0059D4AC /* Peer.cpp in Sources */,
+				849B10AB1757A7DC0059D4AC /* Player.cpp in Sources */,
+				849B10AD1757A7DC0059D4AC /* Room.cpp in Sources */,
+				84BFB8F4176B57E7001C86E1 /* AuthenticationValues.cpp in Sources */,
+				84BFB8F8176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp in Sources */,
+				8406A16217BAB20E00644BD0 /* PlayerMovementInformant.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E99AB57514C5B90900F08070 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B68BFC1732EADF007AFBE4 /* FriendInfo.cpp in Sources */,
+				849B108C1757A7DC0059D4AC /* Client.cpp in Sources */,
+				849B108E1757A7DC0059D4AC /* MutablePlayerFactory.cpp in Sources */,
+				849B10901757A7DC0059D4AC /* MutableRoomFactory.cpp in Sources */,
+				849B10921757A7DC0059D4AC /* PlayerFactory.cpp in Sources */,
+				849B10961757A7DC0059D4AC /* PlayerPropertiesCacher.cpp in Sources */,
+				849B10981757A7DC0059D4AC /* PlayerPropertiesUpdateInformant.cpp in Sources */,
+				849B109A1757A7DC0059D4AC /* RoomFactory.cpp in Sources */,
+				849B109C1757A7DC0059D4AC /* RoomPropertiesCacher.cpp in Sources */,
+				849B109E1757A7DC0059D4AC /* Utils.cpp in Sources */,
+				849B10A61757A7DC0059D4AC /* MutablePlayer.cpp in Sources */,
+				849B10A81757A7DC0059D4AC /* MutableRoom.cpp in Sources */,
+				849B10AA1757A7DC0059D4AC /* Peer.cpp in Sources */,
+				849B10AC1757A7DC0059D4AC /* Player.cpp in Sources */,
+				849B10AE1757A7DC0059D4AC /* Room.cpp in Sources */,
+				84BFB8F5176B57E7001C86E1 /* AuthenticationValues.cpp in Sources */,
+				84BFB8F9176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp in Sources */,
+				8406A16317BAB20E00644BD0 /* PlayerMovementInformant.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E99AB5BA14C5C4F300F08070 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E99AB53C14C5B84300F08070 /* LoadBalancing-cpp-iphone */;
+			targetProxy = E99AB5B914C5C4F300F08070 /* PBXContainerItemProxy */;
+		};
+		E99AB5BC14C5C4F300F08070 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E99AB57814C5B90900F08070 /* LoadBalancing-cpp-macos */;
+			targetProxy = E99AB5BB14C5C4F300F08070 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E99AB54814C5B84300F08070 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = lib;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "LoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = debug;
+		};
+		E99AB54914C5B84300F08070 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = lib;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "LoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = release;
+		};
+		E99AB54B14C5B84300F08070 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/LoadBalancing_cpp.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				PRODUCT_NAME = "LoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = debug;
+		};
+		E99AB54C14C5B84300F08070 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/LoadBalancing_cpp.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				GCC_THUMB_SUPPORT = NO;
+				PRODUCT_NAME = "LoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = release;
+		};
+		E99AB58814C5B90900F08070 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IMAC_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "LoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SDKROOT = macosx;
+			};
+			name = debug;
+		};
+		E99AB58914C5B90900F08070 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IMAC_PLATFORM;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "LoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SDKROOT = macosx;
+			};
+			name = release;
+		};
+		E99AB59314C5BC8700F08070 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_THUMB_SUPPORT = NO;
+				PRODUCT_NAME = "LoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+			};
+			name = debug;
+		};
+		E99AB59414C5BC8700F08070 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_THUMB_SUPPORT = NO;
+				PRODUCT_NAME = "LoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E99AB53714C5B84300F08070 /* Build configuration list for PBXProject "LoadBalancing-cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E99AB54814C5B84300F08070 /* debug */,
+				E99AB54914C5B84300F08070 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		E99AB54A14C5B84300F08070 /* Build configuration list for PBXNativeTarget "LoadBalancing-cpp-iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E99AB54B14C5B84300F08070 /* debug */,
+				E99AB54C14C5B84300F08070 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		E99AB58714C5B90900F08070 /* Build configuration list for PBXNativeTarget "LoadBalancing-cpp-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E99AB58814C5B90900F08070 /* debug */,
+				E99AB58914C5B90900F08070 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		E99AB59214C5BC8700F08070 /* Build configuration list for PBXAggregateTarget "build all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E99AB59314C5BC8700F08070 /* debug */,
+				E99AB59414C5BC8700F08070 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E99AB53414C5B84300F08070 /* Project object */;
+}

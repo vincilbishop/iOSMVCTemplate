@@ -1,0 +1,355 @@
+* release_history-photon-cpp.txt
+* Release history for the Exit Games Photon C++ Client Library
+
+(C) 2004-2013 Exit Games GmbH, http://www.exitgames.com
+
+Questions? Write to developer@exitgames.com or visit forum.exitgames.com
+Please do also look into Common release history.
+
+
+*** version 3.2.5.1
+	Date: 12-03-2013
+	- fixed: the changes from version 3.2.5.0, which moved dns resolution to a separate thread, have broken tcp connections to urls in Marmalade (connections to IPs, udp connections and other platforms than Marmalade have not been affected by this issue)
+	- fixed: destructing a Photon::PhotonPeer, while it may still be doing dns lookup, would result in undefined behavior in version 3.2.5.0
+
+
+*** version 3.2.5.0
+	Date: 09-27-2013
+	- renamed: PhotonPeer::getSentTimeAllowance() into getDisconnectTimeout()
+	- renamed: PhotonPeer::setSentTimeAllowance() into setDisconnectTimeout()
+	- changed: the disconnect timeout settings now are also in force with tcp, not only with udp like it has been before
+	- fixed: the info about the used time macro in the doc of PhotonPeer::getServerTimeOffset() to match the macro thats actually used
+	- fixed: dynamic hostname resolution now gets done in a separate thread, because gethostbyname() is blocking and in some rare situations with bad network conditions it could block its thread for quite a while
+	- fixed: in some situations a permanent error from the underlying socket connection has been treated as a temporary error, so that only a send error and no connection error has been thrown
+	- fixed: in cases of connection errors that triggered a disconnect and connection cleanup, the connection error callback has been called before setting the state to disconnecting so that it wasn't clear inside the callback that it doesn't have to call disconnect() anymore, which led to harmless but redundant unneeded disconnect() calls
+	- fixed: the names of some internally used symbols comflicted with the symbol names of some other 3rd party libs, which could lead into linker errors in some situations
+	- fixed: attempts to connect to a valid but not responding address via tcp now trigger a StatusCode::EXCEPTION_ON_CONNECT, while they prior led into trying to connect for all eternity
+	- fixed: a security bug in the key-exchange for encryption
+
+
+*** version 3.2.3.0
+	Date: 07-08-2013
+	- changed: the signature of LitePeer::opRaiseEvent(), which now accepts every type as payload that is supported by Photons serialization, including (multi-dimensional) arrays, custom types and so on
+	- changed: LitePeer::opRaiseEvent() doesn't provide different overloads for targetActorNumbers and eventCaching + ReceiverGroup anymore, but the first one doesn't rule out the other 2 anymore and vice versa, so if you are using these parameters, please adjust your calls to the changes in the parameter order
+
+
+*** version 3.2.2.2
+	Date: 07-02-2013
+	- fixed: calling PhotonPeer::disconnect() from within PhotonListener::onOperationResponse() resulted in a crash when using tcp since 3.2.0.0
+
+
+*** version 3.2.1.1
+	Date: 03-21-2013
+	- fixed: encryption on all other platforms than iOS didn't work correctly, when the size of the data to encrypt has been less than 16 bytes
+
+
+*** version 3.2.0.0
+	Date: 02-28-2013
+	- changed: removed the whole internal C implementation and replaced it by a new C++ implementation, which is a lot more performant than the old implementation
+	- optimized: all dynamic memory allocations now go through a custom memory manager, that is based on several memory pools, instead of direct calls to malloc/new/new[], internally these MemoryPools allocate chunks with increasing amounts of blocks per new nByte[]
+	- renamed: PhotonPeer_DebugLevel into DebugLevel and moved it into ExitGames::Common namespace
+	- added: namespace ExitGames::Lite
+	- moved: LitePeer from namespace Photon to namespace Lite
+	- removed: class PhotonBaseListener
+	- changed: PhotonListener now inherits from Common::BaseListener instead of Photon::PhotonBaseListener
+	- changed: PhotonPeer()'s first parameter from a non-const PhotonListener* to a const PhotonListener&
+	- changed: PhotonPeer::getListener() now returns a const PhotonListener* isntead of a const PhotonBaseListener*
+	- renamed: PhotonPeer_sendDebugOutput() into EGLOG
+	- removed: PhotonPeer_vsendDebugOutput()
+	- changed: LitePeer()'s first parameter from a non-const Photon::PhotonListener* to a const Photon::PhotonListener&
+	- changed: LitePeer::opLeave() does no longer expect any parameter for the room to leave, as it has always ignored that parameter anyway and instead left the current room
+	- moved: global namespace constants and enums into seperate subnamespaces of namespaces Exitgames::Photon and ExitGames::Lite (one subnamespace for every enum and every group of constants):
+		- added: namespace Photon::ErrorCode
+		- added: namespace Lite::EventCache
+		- added: namespace Lite::EventCode
+		- added: namespace Lite::EventKey
+		- added: namespace Photon::NetworkPort
+		- added: namespace Lite::OperationCode
+		- added: namespace Lite::ParameterCode
+		- added: namespace Photon::PeerState
+		- added: namespace Lite::ReceiverGroup
+		- added: namespace Photon::StatusCode
+	- fixed: PhotonPeer()'s listener argument isn't const anymore, as the app absolutely has to be allowed to add non-const functions to the listener
+	- fixed: when using tcp protocol operations with sizes of more than 32kb have not been working correctly
+
+
+*** version 3.0.4.4
+	Date: 01-23-2013
+	- fixed: PhotonPeer::getRoundTripTime() has not been giving correct values when using tcp
+
+
+*** version 3.0.4.2
+	Date: 01-08-2013
+	- fixed: a bug in the code for exchanging keys when establishing encryption that let into encrpytion not working for a small percentage of keys
+	- fixed: a bug in encryption that resulted in the fact, that except for the iOS and OSX clients it has not been possible to encrypt data with an original size, that has been a multiplier of 16 bytes
+
+
+*** version 3.0.4.0
+	Date: 06-08-2012
+	- fixed: EventData::getParameterForCode(), OperationRequest::getParameterForCode() and OperationResponse::getParameterForCode() now do not crash anymore, if no value can be found for the passed key, but return an empty Object-instance instead
+	- moved: everything from namespace ExitGames into new sub-namespace ExitGames::Photon
+
+
+*** version 3.0.3.5
+	Date: 08-24-2012
+	- fixed: a socket crash bug on iOS, that appeared, when bringing an app to background via power button instead of home button and bringing it back to foreground afterwards
+
+
+*** version 3.0.3.3
+	Date: 05-22-2012
+	- fixed: a bug, which let establishing of encryption fail in roughly about 0,4% of the cases
+
+
+*** version 3.0.3.1
+	Date: 05-15-2012
+	- changed: the lib can now be used by apps, that are build with stlport, not only by the ones, which are using gnulibstdc++ anymore
+
+
+*** version 3.0.3.0
+	Date: 04-16-2012
+	- fixed: a memory leak in the new tcp-implementation, which has ben introduced with version 3.0.1.0
+	- fixed: tcp-support for Marmalade has been broken with the unix-localhost-change from the 3.0.0.0 release
+	- fixed: a successful disconnect isn't triggering a conection error right after anymore
+	- fixed: made BaseListener's and PhotonListeners's destructors virtual for correct listener cleanup logic
+	- changed: OperationResponse::ToString() does not print brackets for the debugMessage anymore, when withDebugMessage is true, if there is no debugMsg at all
+
+
+*** version 3.0.1.3
+	Date: 03-20-2012
+	- fixed: tcp implementation of serverTime and roundtripTime updating
+	- changed: roundtripTime calculation to a model, which is usable independently of the used protocol
+	- fixed: PhotonPeer::fetchServerTimestamp() to not try to fetch the servertime, if the peer is not connected, which has got broken with version 3.0.1.0
+
+
+*** version 3.0.1.1
+	Date: 03-15-2012
+	- fixed: a bug, which linking to the android ndk version of the libs fail under some circumstances
+
+
+*** version 3.0.1.0
+	Date: 02-29-2012
+	- added: support for android ndk as new platform
+	- reimplemeted: tcp-support, as there have been a lot of major issues with the old tcp implementation
+
+
+*** version 3.0.0.0
+	Date: 02-03-2012
+	- fixed: automatically sending pings has not been working with tcp, which led into unexpected disconnects
+	- fixed: debugout to printout brackets after function names likes for C
+	- fixed: removed debugReturn() from PhotonListener, so that it can't hide the inherited function from BaseListener anymore
+	- fixed: defaultvalue of parameter appID, passed to PhotonPeer::connect()
+	- fixed: connection to localhost via tcp on iOS led into a crash
+
+
+*** version 3.0.0.0.RC4
+	Date: 01-30-2012
+	- fixed: iOS ARMv6 support
+	- fixed: a memory leak in class OperationRequest
+	- changed: all PhotonPeer getter-functions are now const
+	- added: abstract base class BaseListener, as base class for PhotonListener
+	- changed: PhotonPeer::getListener() now returns a const BaseListener* instead of a const PhotonListener* -> this makes it possible to override the public listener interface of PhotonPeer in subclasses
+	- changed: made complete public interface of classes PhotonPeer and LitePeer except getter()-/setter()-functions virtual, to activate correct polymorphic behavior
+	- changed: redefines of macros PhotonPeer_sendDebugOutput() and PhotonPeer_vsendDebugOutput() to expect a pointer to a peer instead of a peer, so that one can pass a this-pointer instead of having to dereference it everytime first
+	- fixed: a memory leak in establishing encryption
+
+
+*** version 3.0.0.0.RC3
+	Date: 01-09-2012
+	- renamed: PhotonPeer::Connect() into connect()
+	- renamed: PhotonPeer::Disconnect() into disconnect()
+
+
+*** version 3.0.0.0.RC1
+	Date: 12-09-2011
+	- removed: removed the EventData-constructor taking a parameter of type CEventData* from public API, as the C-layer is an implementation detail and not relevant for the C++ API
+	- removed: removed the OperationResponse-constructor taking a parameter of type CoperationResponse* ferom public API, as the C-layer is an implementation detail and not relevant for the C++ API
+	- added: class OperationRequest
+	- changed: PhotonPeer::opCustom() now takes the opCode and op parameters wrapped into a const OperationRequest&
+	- added: new overload for LitePeer::opRaiseEvent(), with parameters eventCaching and receiverGroup instead of targetActors and numTargetActors
+	- fixed: debugoutput was not beeing displayed correctly on Apple platforms
+	- fixed: OperationResponse.debugMessage wasn't set correctly
+
+
+*** version 3.0.0.0.Beta
+	Date: 10-31-2011
+	- fixed: a memory leak in LitePeer::opJoin(), which has been introduced in 3.0.0.0.Alpha
+	- fixed: tcp-errorhandling
+
+
+*** version 3.0.0.0.PublicAlpha
+	Date: 10-24-2011
+	- changed: debugOut, which is passed to PhotonListener::debugReturn(), now includes its debug-level and the file-path, function-name, line-number of the course-line, from which it originally has been called, so you do not longer have to (or should) add this yourself
+	- removed: invocationID (not supported in Photon 3 anymore)
+	- changed: switched from Photon 2 encryption API to Photon 3 one
+		- added: PhotonPeer::establishEncryption()
+		- added: SC_ENCRYPTION_ESTABLISHED.
+		- added: SC_ENCRYPTION_FAILED_TO_ESTABLISH
+		- removed: PhotonPeer::opExchangeKeysForEncryption()
+		- removed: PhotonPeer::deriveSharedKey()
+		- removed: OPC_RT_EXCHANGEKEYSFORENCRYPTION
+	- fixed: tcp-support is stable now
+	- added: class OperationResponse
+	- added: class EventData
+	- changed: renamed PhotonListener:PhotonPeerEventAction() into onEvent() and changed its signature to take an instance of class EventData instead of its former parameters
+	- changed: renamed PhotonListener::PhotonPeerOperationResult() into onOperationResponse() and changed its signature to take an instance of class OperationResponse instead of its former parameters
+	- changed: renamed PhotonListener::PhotonPeerStatus() into onStatusChanged()
+	- changed: renamed PhotonListener::PhotonPeerDebugReturn() into debugReturn()
+	- changed: return value of PhotonPeer::getListener() is now const
+
+	
+*** version 3.0.0.0.Alpha
+	Date: 10-06-2011
+	- added tcp-support (not stable yet!)
+	- added: new default-parameter useTcp to LitePeer-constructor (default is false)
+	- added: new default-parameter useTcp to PhotonPeer-constructor (default is false)
+	- changed: versioning - first two numbers of client versions from now on match the first two numbers of Photon server version
+	- changed: increased default channel count from 2 to 20
+	- fixed: memory leaks in PhotonPeer::deriveSharedKey()
+	- fixed: memory leaks in PhotonPeer::opExchangeKeysForEncryption()
+	- fixed: decryption of encrypted data bigger than 16 bytes was only working for iOS / OS X, fixed it to also work on all other plattforms
+	- changed: increased all warning thresholds for queues from 75 to 100, just to be the same as in the .NET clients
+	- renamed: statuscode SC_EXCEPTION_CONNECT into SC_EXCEPTION_ON_CONNECT
+	- added: SC_QUEUE_INCOMING_UNRELIABLE_WARNING, which triggers, if the amount of incoming unreliable commands in a single channel reaches the warning size
+	- added: SC_QUEUE_INCOMING_RELIABLE_WARNING, which triggers, if the amount of incoming reliable commands in a single channel reaches the warning size
+	- removed: SC_QUEUE_INCOMING_WARNING, which has been triggered, if overall amount of incoming commands passed the warning size
+	- changed: warnings for queues getting full are not triggered for any element, getting into a queue after the queue reaching warning size, but instead only one time per break of the limit and dropping below it again cycle, so the importan info stays, but the logspam goes
+	- added: state PS_INITIALIZING_APPLICATION to enum PeerState to reflect the difference between being connected, but not initialized and being fully connected and initialized (PS_CONNECTED)
+	- fixed: stringkey-overloads of LitePeer::opGetPropertiesOfActor() and LitePeer::opGetPropertiesOfGame() have not been working correctly for passing NULL als array of keys
+	- changed: in LitePeer::opGetPropertiesOfActor() the parameters "properties" and "numProperties" do not have default values anymore
+	- changed: the order of parameters in LitePeer::opGetPropertiesOfActor()
+	- fixed: PhotonPeer::getServerAddress() does not crash anymore, if called before first connect
+	- changed: PhotonPeer::getQueuedIncomingCommands() and PhotonPeer::getQueuedOutgoingCommands() now return an int instead of an unsigned int, only using -1 for errors and no other negative values, so now same behavior as PhotonPeer_getIncomingReliableCommandsCount()
+	- added: PhtonPeer::getPeerCount()
+	- changed: constants for operation codes, event codes and event keys are now explicitly defined as bytes, to match the types of the according parameters and avoid casts on passing
+	- fixed: peerID is now already initialized to -1 on peer-initialization, not the first time on first connect anymore (but still reseted on every connect)
+	- fixed: on receiving events, the library does not automatically create a string representation for the payload in debugmode anymore, but only, if this string is actually sent to the debug-callback (which is currently only the case for DEBUG_LEVEL_ALL), to improve performance
+
+
+*** version 6.5.5
+	Date: 07-28-2011
+	- fixed: Marmalade clients are not crashing with a BSD-socket error anymore, when receiving fragmented data from the Photon-server
+	- changed: ackknowledgements for received reliable command are now already created, when a reliable command is received, not anymore when it's dispatched, this way acknowledgments for receiving will also happen, when PhotonPeer::dispatchIncomingCommands() is not called for a while
+
+
+*** version 6.5.4
+	Date: 06-28-2011
+	- osx-only:
+		- fixed: compatibility with osx has been broken recently
+	- added: support for marmalade as new platform
+
+
+*** version 6.5.3
+	Date: 06-07-2011
+	- fixed: a memory-leak in PhotonPeer::opCustom(), which has been introduced with version 6.5.1 (only direct use of opCustom was affected by the leak, other operations using it indirectly, like the ones form LitePeer have already been fine)
+
+
+*** version 6.5.2
+	Date: 05-26-2011
+	- fixed: a memory-leak in PhotonListener::PhotonPeerEventAction(), which has been introduced with version 6.5.0
+
+
+*** version 6.5.1
+	Date: 05-23-2011
+	- meego only:
+		- fixed: Photon is now routing clientlib debug-output to PhotonListener::PhotonPeerDebugReturn() in debug-builds, like on the other platforms
+	- fixed: a critical memory-leak in all non-custom operations, which has been introduced with 6.5.0
+
+
+*** version 6.5.0
+	Date: 05-05-2011
+	- fixed: in case, the client receives multiple verifys to a connect-request (due to latency-timeouts), this can't break high level connection-initialization anymore
+	- fixed: instantly disconnecting from the server after the connection has been established will now work as expected
+	- fixed: a recently introduced memory leak, appearing on receiving operation responses in debug version of the library (there was no leak in the release-version)
+	- changed: type of parameters numActors and numActorProperties for LitePeer::opGetPropertiesOfActorByStringKeys() from int to short
+	- changed: type of parameters numActors and numActorProperties for LitePeer::opGetPropertiesOfActorByByteKeys() from int to short
+	- changed: type of parameter numGameProperties for LitePeer::opGetPropertiesOfGameByStringKeys() from int to short
+	- changed: type of parameter numGameProperties for LitePeer::opGetPropertiesOfGameByStringKeys() from int to short
+	- added: optional parameters targetActors and numTargetActors to LitePeer::opRaiseEvent()
+	- changed: The default value returned by PhotonPeer::getRoundTripTime() (300ms, used before connecting) is now replaced with the turnaround time of connect. This should lead to more accurate RTT values much sooner
+	- changed: PhotonPeer::getServerTimeOffset() and PhotonPeer::getServerTime() now both return 0 until the server's timestamp is fetched.
+	- added: PhotonPeer::fetchServerTimestamp() to send the time fetch command
+	- added: internally we use a new command in enet/udp to fetch the timestamp, which minimizes the latency for that roundtrip. It does not affect roundtriptime
+	- replaced: PhotonListener::PhotonPeerReturn() by PhotonPeerOperationResult() for operation results and by PhotonPeerStatus() for connectionstate-changes and errors
+
+
+*** version 6.4.2
+	Date: 03-24-2011
+	- changed: iOS binaries are now build as armv6/armv7 universal binaries instead of armv6 only, as Xcode 4 does not allow to link armv6 static libraries into armv7 application builds anymore, as Xccode 3 does. Please be aware of, that an issue in Xcode libtools prevents you from using "load_all" linker setting, when linking to universal static libraries, which have other universal static libraries included. Please use "force_load" instead to work around the categories in static libraries bug from Xcode 3.
+
+
+*** version 6.4.0
+	Date: 01-19-2011
+	- fixed: in case of a SC_SEND_ERROR now the correct callback gets called
+	- added: warnings for queues getting huge are now not only sent to DebugReturn, but also to PeerReturn(), so you can check for them at runtime without having to programmatically handle the debugout and you now can handle them, even if debugout isn't activated at all
+	- added: support for unicode-strings
+	- fixed: some memory leaks, which have been introduced with version 6.0.0.RC1
+
+
+*** version 6.3.0
+	Date: 12-03-2010
+	- added: PhotonPeer::getServerTime() (same accurrany as PhotonPeer::getServerTimeOffset())
+	- changed: PhotonPeer::getServerTimeOffset() now has a better accurancy
+	- added: PhotonPeer::getIsEncryptionAvailable()
+	- added: PhotonPeer::deriveSharedKey()
+	- added: PhotonPeer::opExchangeKeysForEncryption()
+	- added: optional boolean flag encrypt to PhotonPeer::opCustom()
+	- fixed: LitePeer::opGetProperties() now does not crash anymore, if it is accidentally called on a not connected peer
+	- fixed: LitePeer::opSetPropertiesOfActor() now does not crash anymore, if it is accidentally called on a not connected peer
+	- fixed: LitePeer::opSetPropertiesOfGame() now does not crash anymore, if it is accidentally called on a not connected peer
+	- fixed: LitePeer::opGetPropertiesOfActor() now does not crash anymore, if it is accidentally called on a not connected peer
+	- fixed: LitePeer::opGetPropertiesOfGame() now does not crash anymore, if it is accidentally called on a not connected peer
+	- fixed: you are now able to immediately reconnect from inside of a disconnect-callback, no matter the reason, which has been triggered the callback (the last fix for this issue has not been covering all possible situations)
+	- fixed: PhotonPeer::sendOutgoingCommands() now does not crash anymore, if it is accidentally called on a not connected peer
+
+
+*** version 6.2.0
+	Date: 10-19-2010
+	- changed: LitePeer::opGetPropertiesOfActor() now takes an array of actorNrs and the arraysize instead of a single actorNr
+	- changed: for LitePeer::opGetPropertiesOfActor() parameters actorNrList and/or properties can be NULL now, NULL is interpreted as "all avaiable"
+	- changed: for LitePeer::opGetPropertiesOfGame() and LitePeer_opGetPropertiesOfGameByByteKeys() parameter properties can be NULL now, NULL is interpreted as "all avaiable"
+	- added: LitePeer::opGetProperties(), to get all properties of the game and of all actors with one single request
+	- fixed: PhotonPeer::getServerAddress()
+
+
+*** version 6.1.0
+	Date: 10-15-2010
+	- fixed: passing an appID of more than the allowed 32 characters to PhotonPeer::Connect() doesn't let the lib crash anymore, but the appID is now null-terminated by the lib and the rest of the overlong appId is cut off
+	- fixed: you can now already connect the same peer to another url inside its' disconnect callback, without making the library acknowledging the disconect-acknowledgement from the old server on the new one and this way triggering an exception on the server
+	- changed: All precompiled demos now connect to localhost! From now on, you need to run Photon before trying any of the demos (as we don't guarantee that udp.exitgames.com is online anyways)
+	- renamed: RC_RT_name constants into SC_name constants
+	- added: new class LitePeer, inheriting from PhotonPeer
+	- moved: opRaiseEvent() from class PhotonPeer to class LitePeer
+	- moved: opJoin() from class PhotonPeer to class LitePeer
+	- moved: opLeave() from class PhotonPeer to class LitePeer
+	- moved: opSetPropertiesOfActor() from class PhotonPeer to class LitePeer
+	- moved: opSetPropertiesOfGame() from class PhotonPeer to class LitePeer
+	- moved: opGetPropertiesOfActor() from class PhotonPeer to class LitePeer
+	- moved: opGetPropertiesOfGame() from class PhotonPeer to class LitePeer
+	- added: optional parameters gameProperties, actorProperties and broadcastActorProperties to LitePeer::opJoin()
+	- added: PhotonPeer::getQueuedIncomingCommands()
+	- added: PhotonPeer::getQueuedOutgoingCommands()
+
+
+*** version 6.0.0
+	Date: 09-02-2010
+	- reworked: Photon documentation
+	- fixed: you can now already reconnect from within a PhotonPeerReturn-callback, when it is informing you about a disconnect, and do not have to wait until after the callback returned, anymore
+
+
+*** version 6.0.0.RC2
+	Date: 06-02-2010
+	- changed: removed parameter sid from PhotonPeer::opJoin()
+	- changed: added new parameter PhotonPeer_DebugLevel debugLevel to PhotonListener::PhotonPeerDebugReturn()
+	- optimized: if application is not sending for a while, Photon client only sends one ping to server, not a ping for every existing channel anymore
+	- fixed: PhotonPeer::service() and PhotonPeer::serviceBasic() now read out data, waiting in the incoming buffer of the udp-socket, until it is empty, not only one time per call anymore, so more data packets coming in then service calls are made per second, does not lead into data reaching the application much too late anymore
+
+
+*** version 6.0.0.RC1
+	Date: 04-21-2010
+	- split: Neutron and Photon Clients into seperate SDKs, to get rid of confusion with mixed API
+	- renamed: class NPeer into PhotonPeer
+	- renamed: class NPeerListener into PhotonPeerListener
+	- added: new parameter "withTypes" to Hashtable::toString(), default value is FALSE (old behaviour)
+	- fixed: queues of photon channels are now reseted on disconnect
+	- added: PhotonPeer::getSentTimeAllowance();
+	- added: PhotonPeer::setSentTimeAllowance();

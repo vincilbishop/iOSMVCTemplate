@@ -1,0 +1,64 @@
+PODS:
+  - CocoaLumberjack (1.8.0):
+    - CocoaLumberjack/Extensions
+  - CocoaLumberjack/Core (1.8.0)
+  - CocoaLumberjack/Extensions (1.8.0):
+    - CocoaLumberjack/Core
+  - LumberjackPrettyClassInformation (1.0.0):
+    - CocoaLumberjack (~> 1.8.0)
+  - OCMock (2.0.1)
+  - PhotonServeriOS (3.2.5.1)
+  - ProximityCommon (1.0.0):
+    - CocoaLumberjack
+    - ProximityCommon/Configuration
+  - ProximityCommon/Configuration (1.0.0):
+    - CocoaLumberjack
+  - ProximityController (1.0.0):
+    - CocoaLumberjack
+    - ProximityCommon
+    - ProximityController/AppController
+    - ProximityController/UserController
+    - ProximityModel
+  - ProximityController/AppController (1.0.0):
+    - CocoaLumberjack
+    - ProximityCommon
+    - ProximityModel
+  - ProximityController/UserController (1.0.0):
+    - CocoaLumberjack
+    - ProximityCommon
+    - ProximityModel
+  - ProximityModel (1.0.0):
+    - ProximityCommon
+  - XCTAsyncTestCase (0.1.0)
+
+DEPENDENCIES:
+  - CocoaLumberjack
+  - LumberjackPrettyClassInformation
+  - OCMock (~> 2.0.1)
+  - PhotonServeriOS (from `../ThirdParty/Photon-Server-iOS-SDK/`)
+  - ProximityCommon (from `Common/ProximityCommon`)
+  - ProximityController (from `Controller/ProximityController`)
+  - ProximityModel (from `Model/ProximityModel`)
+  - XCTAsyncTestCase
+
+EXTERNAL SOURCES:
+  PhotonServeriOS:
+    :path: ../ThirdParty/Photon-Server-iOS-SDK/
+  ProximityCommon:
+    :path: Common/ProximityCommon
+  ProximityController:
+    :path: Controller/ProximityController
+  ProximityModel:
+    :path: Model/ProximityModel
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 6ed94046d2ca7fde03a73b3d01b8cfc56574b314
+  LumberjackPrettyClassInformation: 481b15bd88a05f0104bf58b324bbcfce892e2379
+  OCMock: f0c099603f851d07f8d7f2efe26d05da721ec43f
+  PhotonServeriOS: bfe0f59e302fbfd1ab94f07bcbd4ccd39de15622
+  ProximityCommon: 1fcd64d5a3286149c232e76487aab094c8c47954
+  ProximityController: 3811c3f17f124d01dbae3b06394762cdef8f8bbb
+  ProximityModel: d1e8f90aa7cda792bcb27710adf83ae0573ef2e0
+  XCTAsyncTestCase: 712a789c91b966bcce433fced0b930ffc8b5b10a
+
+COCOAPODS: 0.29.0

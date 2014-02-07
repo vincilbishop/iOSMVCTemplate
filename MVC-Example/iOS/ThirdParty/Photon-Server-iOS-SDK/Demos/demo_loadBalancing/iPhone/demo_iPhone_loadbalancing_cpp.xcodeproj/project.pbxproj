@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84E8CAD51609EC98003BD5F4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E8CAD41609EC98003BD5F4 /* Default-568h@2x.png */; };
+		E993249C14C6C51300F32268 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E993249B14C6C51300F32268 /* UIKit.framework */; };
+		E993249E14C6C51300F32268 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E993249D14C6C51300F32268 /* Foundation.framework */; };
+		E99324A014C6C51300F32268 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E993249F14C6C51300F32268 /* CoreGraphics.framework */; };
+		E99324D314C6C8F800F32268 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E99324C414C6C8F800F32268 /* AppDelegate.mm */; };
+		E99324D714C6C8F800F32268 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E99324CC14C6C8F800F32268 /* ViewController_iPad.xib */; };
+		E99324D814C6C8F800F32268 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E99324CE14C6C8F800F32268 /* ViewController_iPhone.xib */; };
+		E99324D914C6C8F800F32268 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E99324D014C6C8F800F32268 /* main.m */; };
+		E99324DA14C6C8F800F32268 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E99324D214C6C8F800F32268 /* ViewController.m */; };
+		E99324E314C6CA4200F32268 /* NetworkLogic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E99324E014C6CA4200F32268 /* NetworkLogic.cpp */; };
+		E99324EE14C6D8E200F32268 /* Console.m in Sources */ = {isa = PBXBuildFile; fileRef = E99324ED14C6D8E200F32268 /* Console.m */; };
+		E9B3BA9815AAE98500DBD32D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B3BA9215AAE98500DBD32D /* Icon-72.png */; };
+		E9B3BA9915AAE98500DBD32D /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B3BA9315AAE98500DBD32D /* Icon-Small-50.png */; };
+		E9B3BA9A15AAE98500DBD32D /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B3BA9415AAE98500DBD32D /* Icon-Small.png */; };
+		E9B3BA9B15AAE98500DBD32D /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B3BA9515AAE98500DBD32D /* Icon-Small@2x.png */; };
+		E9B3BA9C15AAE98500DBD32D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B3BA9615AAE98500DBD32D /* Icon.png */; };
+		E9B3BA9D15AAE98500DBD32D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B3BA9715AAE98500DBD32D /* Icon@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E99324F814C6E4B200F32268 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E99324EF14C6E4B200F32268 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E99AB53D14C5B84300F08070;
+			remoteInfo = "LoadBalancing-cpp-iphone";
+		};
+		E99324FA14C6E4B200F32268 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E99324EF14C6E4B200F32268 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E99AB57914C5B90900F08070;
+			remoteInfo = "LoadBalancing-cpp-macos";
+		};
+		E993250714C6E55100F32268 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E99324EF14C6E4B200F32268 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E99AB53C14C5B84300F08070;
+			remoteInfo = "LoadBalancing-cpp-iphone";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84E8CAD41609EC98003BD5F4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		E993249714C6C51300F32268 /* demo_iPhone_loadbalancing_cpp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo_iPhone_loadbalancing_cpp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E993249B14C6C51300F32268 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E993249D14C6C51300F32268 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E993249F14C6C51300F32268 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E99324C314C6C8F800F32268 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		E99324C414C6C8F800F32268 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = SOURCE_ROOT; };
+		E99324C714C6C8F800F32268 /* demo_iPhone_loadbalancing_cpp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "demo_iPhone_loadbalancing_cpp-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E99324C814C6C8F800F32268 /* demo_iPhone_loadbalancing_cpp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "demo_iPhone_loadbalancing_cpp-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		E99324CB14C6C8F800F32268 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		E99324CD14C6C8F800F32268 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController_iPad.xib; sourceTree = "<group>"; };
+		E99324CF14C6C8F800F32268 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
+		E99324D014C6C8F800F32268 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		E99324D114C6C8F800F32268 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = SOURCE_ROOT; };
+		E99324D214C6C8F800F32268 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = SOURCE_ROOT; };
+		E99324DC14C6CA3600F32268 /* NetworkLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkLogic.h; sourceTree = "<group>"; };
+		E99324DD14C6CA3600F32268 /* OutputListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputListener.h; sourceTree = "<group>"; };
+		E99324E014C6CA4200F32268 /* NetworkLogic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetworkLogic.cpp; sourceTree = "<group>"; };
+		E99324EA14C6D44A00F32268 /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = SOURCE_ROOT; };
+		E99324ED14C6D8E200F32268 /* Console.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Console.m; sourceTree = SOURCE_ROOT; };
+		E99324EF14C6E4B200F32268 /* LoadBalancing-cpp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LoadBalancing-cpp.xcodeproj"; path = "../../../LoadBalancing-cpp/LoadBalancing-cpp.xcodeproj"; sourceTree = "<group>"; };
+		E9B3BA9215AAE98500DBD32D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		E9B3BA9315AAE98500DBD32D /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		E9B3BA9415AAE98500DBD32D /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		E9B3BA9515AAE98500DBD32D /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		E9B3BA9615AAE98500DBD32D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		E9B3BA9715AAE98500DBD32D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E993249414C6C51300F32268 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E993249C14C6C51300F32268 /* UIKit.framework in Frameworks */,
+				E993249E14C6C51300F32268 /* Foundation.framework in Frameworks */,
+				E99324A014C6C51300F32268 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E993248C14C6C51300F32268 = {
+			isa = PBXGroup;
+			children = (
+				E99324EF14C6E4B200F32268 /* LoadBalancing-cpp.xcodeproj */,
+				E99324DF14C6CA4200F32268 /* src */,
+				E99324DB14C6CA3600F32268 /* inc */,
+				E99324A114C6C51300F32268 /* iPhone */,
+				E993249A14C6C51300F32268 /* Frameworks */,
+				E993249814C6C51300F32268 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E993249814C6C51300F32268 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E993249714C6C51300F32268 /* demo_iPhone_loadbalancing_cpp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E993249A14C6C51300F32268 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E993249B14C6C51300F32268 /* UIKit.framework */,
+				E993249D14C6C51300F32268 /* Foundation.framework */,
+				E993249F14C6C51300F32268 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E99324A114C6C51300F32268 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				E9B3BA9115AAE98500DBD32D /* icons */,
+				84E8CAD41609EC98003BD5F4 /* Default-568h@2x.png */,
+				E99324ED14C6D8E200F32268 /* Console.m */,
+				E99324EA14C6D44A00F32268 /* Console.h */,
+				E99324C314C6C8F800F32268 /* AppDelegate.h */,
+				E99324C414C6C8F800F32268 /* AppDelegate.mm */,
+				E99324C714C6C8F800F32268 /* demo_iPhone_loadbalancing_cpp-Info.plist */,
+				E99324C814C6C8F800F32268 /* demo_iPhone_loadbalancing_cpp-Prefix.pch */,
+				E99324C914C6C8F800F32268 /* en.lproj */,
+				E99324D014C6C8F800F32268 /* main.m */,
+				E99324D114C6C8F800F32268 /* ViewController.h */,
+				E99324D214C6C8F800F32268 /* ViewController.m */,
+			);
+			name = iPhone;
+			path = demo_iPhone_loadbalancing_cpp;
+			sourceTree = "<group>";
+		};
+		E99324C914C6C8F800F32268 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				E99324CA14C6C8F800F32268 /* InfoPlist.strings */,
+				E99324CC14C6C8F800F32268 /* ViewController_iPad.xib */,
+				E99324CE14C6C8F800F32268 /* ViewController_iPhone.xib */,
+			);
+			path = en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		E99324DB14C6CA3600F32268 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				E99324DC14C6CA3600F32268 /* NetworkLogic.h */,
+				E99324DD14C6CA3600F32268 /* OutputListener.h */,
+			);
+			name = inc;
+			path = ../inc;
+			sourceTree = "<group>";
+		};
+		E99324DF14C6CA4200F32268 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E99324E014C6CA4200F32268 /* NetworkLogic.cpp */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+		};
+		E99324F014C6E4B200F32268 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E99324F914C6E4B200F32268 /* libLoadBalancing-cpp_debug_iphoneos.a */,
+				E99324FB14C6E4B200F32268 /* libLoadBalancing-cpp_debug_macosx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9B3BA9115AAE98500DBD32D /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				E9B3BA9215AAE98500DBD32D /* Icon-72.png */,
+				E9B3BA9315AAE98500DBD32D /* Icon-Small-50.png */,
+				E9B3BA9415AAE98500DBD32D /* Icon-Small.png */,
+				E9B3BA9515AAE98500DBD32D /* Icon-Small@2x.png */,
+				E9B3BA9615AAE98500DBD32D /* Icon.png */,
+				E9B3BA9715AAE98500DBD32D /* Icon@2x.png */,
+			);
+			path = icons;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E993249614C6C51300F32268 /* demo_iPhone_loadbalancing_cpp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E99324AF14C6C51300F32268 /* Build configuration list for PBXNativeTarget "demo_iPhone_loadbalancing_cpp" */;
+			buildPhases = (
+				E993249314C6C51300F32268 /* Sources */,
+				E993249414C6C51300F32268 /* Frameworks */,
+				E993249514C6C51300F32268 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E993250814C6E55100F32268 /* PBXTargetDependency */,
+			);
+			name = demo_iPhone_loadbalancing_cpp;
+			productName = demo_iPhone_loadbalancing_cpp;
+			productReference = E993249714C6C51300F32268 /* demo_iPhone_loadbalancing_cpp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E993248E14C6C51300F32268 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = E993249114C6C51300F32268 /* Build configuration list for PBXProject "demo_iPhone_loadbalancing_cpp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E993248C14C6C51300F32268;
+			productRefGroup = E993249814C6C51300F32268 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E99324F014C6E4B200F32268 /* Products */;
+					ProjectRef = E99324EF14C6E4B200F32268 /* LoadBalancing-cpp.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E993249614C6C51300F32268 /* demo_iPhone_loadbalancing_cpp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E99324F914C6E4B200F32268 /* libLoadBalancing-cpp_debug_iphoneos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-cpp_debug_iphoneos.a";
+			remoteRef = E99324F814C6E4B200F32268 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E99324FB14C6E4B200F32268 /* libLoadBalancing-cpp_debug_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-cpp_debug_macosx.a";
+			remoteRef = E99324FA14C6E4B200F32268 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E993249514C6C51300F32268 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E99324D714C6C8F800F32268 /* ViewController_iPad.xib in Resources */,
+				E99324D814C6C8F800F32268 /* ViewController_iPhone.xib in Resources */,
+				E9B3BA9815AAE98500DBD32D /* Icon-72.png in Resources */,
+				E9B3BA9915AAE98500DBD32D /* Icon-Small-50.png in Resources */,
+				E9B3BA9A15AAE98500DBD32D /* Icon-Small.png in Resources */,
+				E9B3BA9B15AAE98500DBD32D /* Icon-Small@2x.png in Resources */,
+				E9B3BA9C15AAE98500DBD32D /* Icon.png in Resources */,
+				E9B3BA9D15AAE98500DBD32D /* Icon@2x.png in Resources */,
+				84E8CAD51609EC98003BD5F4 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E993249314C6C51300F32268 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E99324D314C6C8F800F32268 /* AppDelegate.mm in Sources */,
+				E99324D914C6C8F800F32268 /* main.m in Sources */,
+				E99324DA14C6C8F800F32268 /* ViewController.m in Sources */,
+				E99324E314C6CA4200F32268 /* NetworkLogic.cpp in Sources */,
+				E99324EE14C6D8E200F32268 /* Console.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E993250814C6E55100F32268 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LoadBalancing-cpp-iphone";
+			targetProxy = E993250714C6E55100F32268 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E99324CA14C6C8F800F32268 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E99324CB14C6C8F800F32268 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E99324CC14C6C8F800F32268 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E99324CD14C6C8F800F32268 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		E99324CE14C6C8F800F32268 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E99324CF14C6C8F800F32268 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E99324AD14C6C51300F32268 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../..;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"../../../Common-cpp/lib",
+					"../../../Photon-cpp/lib",
+					"../../../LoadBalancing-cpp/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-force_load",
+					"../../../Common-cpp/lib/libCommon-cpp_$(CONFIGURATION)_$(PLATFORM_NAME).a",
+					"-lCommon-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lPhoton-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lLoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+				);
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = debug;
+		};
+		E99324AE14C6C51300F32268 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../..;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"../../../Common-cpp/lib",
+					"../../../Photon-cpp/lib",
+					"../../../LoadBalancing-cpp/lib",
+				);
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-force_load",
+					"../../../Common-cpp/lib/libCommon-cpp_$(CONFIGURATION)_$(PLATFORM_NAME).a",
+					"-lCommon-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lPhoton-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lLoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+				);
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = release;
+		};
+		E99324B014C6C51300F32268 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "demo_iPhone_loadbalancing_cpp-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "demo_iPhone_loadbalancing_cpp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = debug;
+		};
+		E99324B114C6C51300F32268 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "demo_iPhone_loadbalancing_cpp-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "demo_iPhone_loadbalancing_cpp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E993249114C6C51300F32268 /* Build configuration list for PBXProject "demo_iPhone_loadbalancing_cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E99324AD14C6C51300F32268 /* debug */,
+				E99324AE14C6C51300F32268 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		E99324AF14C6C51300F32268 /* Build configuration list for PBXNativeTarget "demo_iPhone_loadbalancing_cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E99324B014C6C51300F32268 /* debug */,
+				E99324B114C6C51300F32268 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E993248E14C6C51300F32268 /* Project object */;
+}

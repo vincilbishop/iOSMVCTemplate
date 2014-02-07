@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		444089259892457794EA53D8 /* libPods-ProximityModel-ProximityModelTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B2496EF02446CE80D81DED /* libPods-ProximityModel-ProximityModelTests.a */; };
+		D82A8127E207400FB761AE02 /* libPods-ProximityModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2554A4A297FA4F528C52A34C /* libPods-ProximityModel.a */; };
+		FA1A018C18A31F4900F0ED7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1A018B18A31F4900F0ED7C /* Foundation.framework */; };
+		FA1A019118A31F4900F0ED7C /* ProximityModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA1A019018A31F4900F0ED7C /* ProximityModel.h */; };
+		FA1A019318A31F4900F0ED7C /* ProximityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1A019218A31F4900F0ED7C /* ProximityModel.m */; };
+		FA1A019A18A31F4A00F0ED7C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1A019918A31F4A00F0ED7C /* XCTest.framework */; };
+		FA1A019B18A31F4A00F0ED7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1A018B18A31F4900F0ED7C /* Foundation.framework */; };
+		FA1A019D18A31F4A00F0ED7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1A019C18A31F4A00F0ED7C /* UIKit.framework */; };
+		FA1A01A018A31F4A00F0ED7C /* libProximityModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1A018818A31F4900F0ED7C /* libProximityModel.a */; };
+		FA1A01A618A31F4A00F0ED7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA1A01A418A31F4A00F0ED7C /* InfoPlist.strings */; };
+		FA1A01A818A31F4A00F0ED7C /* ProximityModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1A01A718A31F4A00F0ED7C /* ProximityModelTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA1A019E18A31F4A00F0ED7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA1A018018A31F4900F0ED7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA1A018718A31F4900F0ED7C;
+			remoteInfo = ProximityModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA1A018618A31F4900F0ED7C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				FA1A019118A31F4900F0ED7C /* ProximityModel.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2554A4A297FA4F528C52A34C /* libPods-ProximityModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProximityModel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B9DD9275B5B4A25A87E7D13 /* Pods-ProximityModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityModel.xcconfig"; path = "../../Pods/Pods-ProximityModel.xcconfig"; sourceTree = "<group>"; };
+		73B2496EF02446CE80D81DED /* libPods-ProximityModel-ProximityModelTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProximityModel-ProximityModelTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCCA766FD2A44C1CB91A6B37 /* Pods-ProximityModel-ProximityModelTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityModel-ProximityModelTests.xcconfig"; path = "../../Pods/Pods-ProximityModel-ProximityModelTests.xcconfig"; sourceTree = "<group>"; };
+		FA1A018818A31F4900F0ED7C /* libProximityModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libProximityModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1A018B18A31F4900F0ED7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FA1A018F18A31F4900F0ED7C /* ProximityModel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProximityModel-Prefix.pch"; sourceTree = "<group>"; };
+		FA1A019018A31F4900F0ED7C /* ProximityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProximityModel.h; sourceTree = "<group>"; };
+		FA1A019218A31F4900F0ED7C /* ProximityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProximityModel.m; sourceTree = "<group>"; };
+		FA1A019818A31F4A00F0ED7C /* ProximityModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProximityModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1A019918A31F4A00F0ED7C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FA1A019C18A31F4A00F0ED7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FA1A01A318A31F4A00F0ED7C /* ProximityModelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProximityModelTests-Info.plist"; sourceTree = "<group>"; };
+		FA1A01A518A31F4A00F0ED7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA1A01A718A31F4A00F0ED7C /* ProximityModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProximityModelTests.m; sourceTree = "<group>"; };
+		FA92E12B18A4605000C64D33 /* ProximityModel.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProximityModel.podspec; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA1A018518A31F4900F0ED7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1A018C18A31F4900F0ED7C /* Foundation.framework in Frameworks */,
+				D82A8127E207400FB761AE02 /* libPods-ProximityModel.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA1A019518A31F4A00F0ED7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1A019A18A31F4A00F0ED7C /* XCTest.framework in Frameworks */,
+				FA1A019D18A31F4A00F0ED7C /* UIKit.framework in Frameworks */,
+				FA1A019B18A31F4A00F0ED7C /* Foundation.framework in Frameworks */,
+				FA1A01A018A31F4A00F0ED7C /* libProximityModel.a in Frameworks */,
+				444089259892457794EA53D8 /* libPods-ProximityModel-ProximityModelTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA1A017F18A31F4900F0ED7C = {
+			isa = PBXGroup;
+			children = (
+				FA1A018D18A31F4900F0ED7C /* ProximityModel */,
+				FA1A01A118A31F4A00F0ED7C /* ProximityModelTests */,
+				FA1A018A18A31F4900F0ED7C /* Frameworks */,
+				FA1A018918A31F4900F0ED7C /* Products */,
+				4B9DD9275B5B4A25A87E7D13 /* Pods-ProximityModel.xcconfig */,
+				DCCA766FD2A44C1CB91A6B37 /* Pods-ProximityModel-ProximityModelTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		FA1A018918A31F4900F0ED7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA1A018818A31F4900F0ED7C /* libProximityModel.a */,
+				FA1A019818A31F4A00F0ED7C /* ProximityModelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA1A018A18A31F4900F0ED7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA1A018B18A31F4900F0ED7C /* Foundation.framework */,
+				FA1A019918A31F4A00F0ED7C /* XCTest.framework */,
+				FA1A019C18A31F4A00F0ED7C /* UIKit.framework */,
+				2554A4A297FA4F528C52A34C /* libPods-ProximityModel.a */,
+				73B2496EF02446CE80D81DED /* libPods-ProximityModel-ProximityModelTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA1A018D18A31F4900F0ED7C /* ProximityModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA1A019018A31F4900F0ED7C /* ProximityModel.h */,
+				FA1A019218A31F4900F0ED7C /* ProximityModel.m */,
+				FA1A018E18A31F4900F0ED7C /* Supporting Files */,
+			);
+			path = ProximityModel;
+			sourceTree = "<group>";
+		};
+		FA1A018E18A31F4900F0ED7C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA92E12B18A4605000C64D33 /* ProximityModel.podspec */,
+				FA1A018F18A31F4900F0ED7C /* ProximityModel-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA1A01A118A31F4A00F0ED7C /* ProximityModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA1A01A718A31F4A00F0ED7C /* ProximityModelTests.m */,
+				FA1A01A218A31F4A00F0ED7C /* Supporting Files */,
+			);
+			path = ProximityModelTests;
+			sourceTree = "<group>";
+		};
+		FA1A01A218A31F4A00F0ED7C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA1A01A318A31F4A00F0ED7C /* ProximityModelTests-Info.plist */,
+				FA1A01A418A31F4A00F0ED7C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA1A018718A31F4900F0ED7C /* ProximityModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA1A01AB18A31F4A00F0ED7C /* Build configuration list for PBXNativeTarget "ProximityModel" */;
+			buildPhases = (
+				4F24739CF62A4CD7B8356B2B /* Check Pods Manifest.lock */,
+				FA1A018418A31F4900F0ED7C /* Sources */,
+				FA1A018518A31F4900F0ED7C /* Frameworks */,
+				FA1A018618A31F4900F0ED7C /* CopyFiles */,
+				4BB28A234CEC4A76A5F0F515 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProximityModel;
+			productName = ProximityModel;
+			productReference = FA1A018818A31F4900F0ED7C /* libProximityModel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FA1A019718A31F4A00F0ED7C /* ProximityModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA1A01AE18A31F4A00F0ED7C /* Build configuration list for PBXNativeTarget "ProximityModelTests" */;
+			buildPhases = (
+				B5F7302BA37A427CB3777585 /* Check Pods Manifest.lock */,
+				FA1A019418A31F4A00F0ED7C /* Sources */,
+				FA1A019518A31F4A00F0ED7C /* Frameworks */,
+				FA1A019618A31F4A00F0ED7C /* Resources */,
+				0C0F894D118F4411800F7892 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA1A019F18A31F4A00F0ED7C /* PBXTargetDependency */,
+			);
+			name = ProximityModelTests;
+			productName = ProximityModelTests;
+			productReference = FA1A019818A31F4A00F0ED7C /* ProximityModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA1A018018A31F4900F0ED7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Premier Mobile Systems";
+			};
+			buildConfigurationList = FA1A018318A31F4900F0ED7C /* Build configuration list for PBXProject "ProximityModel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA1A017F18A31F4900F0ED7C;
+			productRefGroup = FA1A018918A31F4900F0ED7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA1A018718A31F4900F0ED7C /* ProximityModel */,
+				FA1A019718A31F4A00F0ED7C /* ProximityModelTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA1A019618A31F4A00F0ED7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1A01A618A31F4A00F0ED7C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C0F894D118F4411800F7892 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../../Pods/Pods-ProximityModel-ProximityModelTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BB28A234CEC4A76A5F0F515 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../../Pods/Pods-ProximityModel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F24739CF62A4CD7B8356B2B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5F7302BA37A427CB3777585 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA1A018418A31F4900F0ED7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1A019318A31F4900F0ED7C /* ProximityModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA1A019418A31F4A00F0ED7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1A01A818A31F4A00F0ED7C /* ProximityModelTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA1A019F18A31F4A00F0ED7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA1A018718A31F4900F0ED7C /* ProximityModel */;
+			targetProxy = FA1A019E18A31F4A00F0ED7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA1A01A418A31F4A00F0ED7C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA1A01A518A31F4A00F0ED7C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA1A01A918A31F4A00F0ED7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA1A01AA18A31F4A00F0ED7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA1A01AC18A31F4A00F0ED7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B9DD9275B5B4A25A87E7D13 /* Pods-ProximityModel.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/ProximityModel.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProximityModel/ProximityModel-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FA1A01AD18A31F4A00F0ED7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B9DD9275B5B4A25A87E7D13 /* Pods-ProximityModel.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/ProximityModel.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProximityModel/ProximityModel-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FA1A01AF18A31F4A00F0ED7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCCA766FD2A44C1CB91A6B37 /* Pods-ProximityModel-ProximityModelTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProximityModel/ProximityModel-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ProximityModelTests/ProximityModelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FA1A01B018A31F4A00F0ED7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCCA766FD2A44C1CB91A6B37 /* Pods-ProximityModel-ProximityModelTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProximityModel/ProximityModel-Prefix.pch";
+				INFOPLIST_FILE = "ProximityModelTests/ProximityModelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA1A018318A31F4900F0ED7C /* Build configuration list for PBXProject "ProximityModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1A01A918A31F4A00F0ED7C /* Debug */,
+				FA1A01AA18A31F4A00F0ED7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA1A01AB18A31F4A00F0ED7C /* Build configuration list for PBXNativeTarget "ProximityModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1A01AC18A31F4A00F0ED7C /* Debug */,
+				FA1A01AD18A31F4A00F0ED7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA1A01AE18A31F4A00F0ED7C /* Build configuration list for PBXNativeTarget "ProximityModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1A01AF18A31F4A00F0ED7C /* Debug */,
+				FA1A01B018A31F4A00F0ED7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA1A018018A31F4900F0ED7C /* Project object */;
+}

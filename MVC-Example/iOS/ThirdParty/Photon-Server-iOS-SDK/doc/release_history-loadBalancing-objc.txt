@@ -1,0 +1,203 @@
+* release_history-loadBalancing-objc.txt
+* Release history for the Exit Games LoadBalancing Objective C Client Library
+
+(C) 2004-2013 Exit Games GmbH, http://www.exitgames.com
+
+Questions? Write to developer@exitgames.com or visit forum.exitgames.com
+
+
+*** version 3.2.5.0
+	Date: 10-16-2013
+	- changed: instances of EGLoadBalancingRoom, EGLoadBalancingMutableRoom, EGLoadBalancingPlayer and EGLoadBalancingMutablePlayer now get constructed via factory functions, so that they can get subclassed by the app and the lib will then correctly create the subclass instances - override EGLoadBalancingMutableRoom:createPlayer(), EGLoadBalancingClient::createMutablePlayer(), EGLoadBalancingClient::createRoom() and/or EGLoadBalancingClient::createMutableRoom() when subclassing EGLoadBalancingPlayer, EGLoadBalancingMutablePlayer, EGLoadBalancingRoom and/or EGLoadBalancingMutableRoom
+	- added: CustomAuthentication support
+	- fixed: the entry for the local player in EGLoadBalancingMutableRoom.Players now references the same object as EGLoadBalancingClient.LocalPlayer, instead of holding a copy of that object, this avoids issues caused by missing synchronizations between two different copies
+	- fixed: EGLoadBalancingRoom.PlayerCount has not been working when called on an instance of EGLoadBalancingRooms subclass EGLoadBalancingMutableRoom
+	- added: parameterless optional callback EGLoadBalancingListener::onFindFriendsResponse(), which gets called when a friend list fetching operation has been finished so that the app knows, when EGLoadBalancingClient.FriendList will hold the fetched values
+	- fixed: retain cycles between Client and MutablePlayer/MutableRoom
+
+
+*** version 3.2.4.0
+	Date: 08-01-2013
+	- added: parameter playerNr to EGLoadBalancingListener::onPlayerPropertiesChange()
+
+
+*** version 3.2.3.0
+	Date: 07-08-2013
+	- changed: the signature of EGLoadBalancingPeer::opRaiseEvent(), which now accepts every type as payload that is supported by Photons serialization, including (multi-dimensional) arrays, custom types and so on
+	- changed: EGLoadBalancingPeer::opRaiseEvent() doesn't provide different overloads for targetActorNumbers and eventCaching + ReceiverGroup anymore, but the first one doesn't rule out the other 2 anymore and vice versa, so if you are using these parameters, please adjust your calls to the changes in the parameter order
+
+
+*** version 3.2.2.2
+	Date: 07-02-2013
+	- fixed: creating/joining a room resulted in a crash when using tcp since 3.2.0.0
+
+
+*** version 3.2.2.0
+	Date: 05-06-2013
+	- added: optional callback EGLoadBalancingListener::onRoomListUpdate()
+	- added: optional callback EGLoadBalancingListener::onRoomPropertiesChange()
+	- added: optional callback EGLoadBalancingListener::onPlayerPropertiesChange()
+	- added: optional callback EGLoadBalancingListener::onAppStatsUpdate()
+	- removed: optional parameter customLocalPlayerProperties from EGLoadBalancingClient::opCreateRoom(), EGLoadBalancingClient::opJoinRoom() and EGLoadBalancingClient::opJoinRandomRoom(); you should set custom local player properties through EGLoadBalancingClient.LocalPlayer instead
+	- moved: local player access from EGLoadBalancingMutableRoom to EGLoadBalancingClient, as this way its more obvious, that local player poperties are not affected by joining or leaving rooms, but can be set in and outside of rooms and don't get reseted when switching rooms
+	- added: EGLoadBalancingClient.FriendList
+	- added: EGLoadBalancingClient.FriendListAge
+	- added: class EGFriendInfo
+	- added: EGLoadBalancingPeer::opFindFriends()
+	- added: new optional parameter userID to EGLoadBalancinPeer::opAuthenticate()
+	- changed: type of parameter propsListedInLobby in EGLoadBalancingPeer::opCreateRoom() and EGLoadBalancingClient::opCreateRoom() isn't NSArray anymore, but EGArray
+
+
+*** version 3.2.1.1
+	Date: 03-21-2013
+	- fixed: LoadBalancingRoom.IsOpen and LoadBalancingMutableRoom.IsVisible have not been initialized correctly
+
+
+*** version 3.2.0.0
+	Date: 02-01-2013
+	- note: your app now has to include LoadBalancing-cpp/inc, as LoadBalancing-objC now uses the enums folders from there instead of keeping its own redundant copies of them
+	- optimized: all dynamic memory allocations now go through a custom memory manager, that is based on several memory pools, instead of direct calls to malloc/new/new[], internally these MemoryPools allocate chunks with increasing amounts of blocks per new nByte[]
+	- fixed: some incompatibility with custom new/new[] overrides
+	- renamed: class LoadBalancingClient into EGLoadBalancingClient
+	- renamed: protocol LoadBalancingListener into EGLoadBalancingListener
+	- renamed: class LoadBalancingPeer into EGLoadBalancingPeer
+	- renamed: class LoadBalancingPlayer into EGLoadBalancingPlayer
+	- renamed: class LoadBalancingMutablePlayer into EGLoadBalancingMutablePlayer
+	- renamed: class LoadBalancingRoom into EGLoadBalancingRoom
+	- renamed: class LoadBalancingMutableRoom into EGLoadBalancingMutableRoom
+
+
+*** version 3.0.4.1
+	Date: 12-27-2012
+	- fixed: player properties have been broken in 3.0.4.0
+
+	
+*** version 3.0.4.0
+	Date: 10-16-2012
+	- changed: removed the printout of the payload for received events in LoadBalancingClient::onEvent(), as for events with a size of several kb stringifying the payload can get REALLY expensive
+	- changed: static classes ErrorCode, EventCode, JoinType, OperationCode, ParameterCode, Properties::Player and Properties::Room into being namespaces with the same name, so that their static const members are stored at an addressable memory location
+	- changed: after calling connectionErrorReturn() LoadBalancingClient will trigger a disconnect, if the client is not already disconnected or disconnecting, so that the app has not to call disconnect() itself anymore, before its able to reconnect in case of a connection error
+	- fixed: a memory leak on receiving playernames of remote players when joining a room
+
+
+**** version 3.0.3.7
+	Date: 08-31-2012
+	- optimized: LoadBalancingClient::opCreateRoom() has sent playerProperties even when they have been empty, which isn't needed
+
+
+**** version 3.0.3.0
+	Date: 04-12-2012
+	- added: optional parameter propertiesListedInLobby to LoadBalancingClient::opCreateRoom()
+	- addded: optional parameter customLocalPlayerProperties to LoadBalancingClient::opJoinRandomRoom()
+	- added: optional parameter propertiesListedInLobby to LoadBalancingPeer::opCreateRoom()
+	- changed: LoadBalancingPlayer now inherits from Base
+	- changed: LoadBalancingRoom now inherits from Base
+	- added: LoadBalancingMutablePlayer.IsMasterClient
+	- added: LoadBalancingMutableRoom.MasterClientID
+	- added: LoadBalancingMutableRoom.PropsListedInLobby
+	- added: LoadBalancingMutableRoom.PropsListedInLobby
+	- changed: players now cleanup their server side event caches on leaving a room
+	- added: new member-vars masterclientID and optionally propsPrintedInLobby are now included in the output of LoadBalancingMutableRoom::toString()
+	- changed: LoadBalancingPeer::opAuthenticate() now passes false for withTypes, when printing out the opRequest
+	- changed: LoadBalancingClient::opCreateRoom() isn't sending room properties, anymore, when being called on master, to optimize bandwith usage, as only the gameserver will honor them, anyway
+	- fixed: LoadBalancingClient::opCreateRoom() and LoadBalancingClient::opJoinRoom have not been sending the custom local player properties at all
+	- changed: LoadBalancingClient::onEvent() now passes false for withTypes, when printing out the event
+	- changed: debug level for debug print of LoadBalancingClient::onEvent() from ALL to INFO
+
+
+** version 3.0.2.1
+	Date: 03-22-2012
+	- removed: authentication timeout code, as do to server side improvements it is not needed anymore
+
+
+*** version 3.0.1.3
+	Date: 03-20-2012
+	- fixed: another bug, which has been triggering wrong encryption/authentication timeouts
+
+
+*** version 3.0.1.2
+	Date: 03-16-2012
+	- fixed: a bug, which has been triggering wrong encryption/authentication timeouts
+
+
+*** version 3.0.0.1
+	Date: 02-14-2012
+	- fixed: the autoJoinLobby flag has accidentally been ignored, when coming back from gameserver
+
+
+*** version 3.0.0.0
+	Date: 02-09-2012
+	- added: overloads of LoadBalancingMutableRoom::toString() to print out the localPlayer and the list of players curently in the room
+	- removed: LoadBalancingMutablePlayer.CustomProperties writeaccess override, so that its readonly like in the immutable baseclass
+	- added: LoadBalancingMutablePlayer::mergeCustomProperties()
+	- added: LoadBalancingMutablePlayer::addCustomProperty()
+	- added: LoadBalancingMutablePlayer::addCustomProperties()
+	- added: LoadBalancingMutablePlayer::removeCustomProperty()
+	- added: LoadBalancingMutablePlayer::removeCustomProperties()
+	- removed: LoadBalancingMutableRoom.CustomProperties writeaccess override, so that its readonly like in the immutable baseclass
+	- added: LoadBalancingMutableRoom::mergeCustomProperties()
+	- added: LoadBalancingMutableRoom::addCustomProperty()
+	- added: LoadBalancingMutableRoom::addCustomProperties()
+	- added: LoadBalancingMutableRoom::removeCustomProperty()
+	- added: LoadBalancingMutableRoom::removeCustomProperties()
+	- moved: LoadBalancingClient.LocalPlayer to LoadBalancingMutableRoom
+	- moved: LoadBalancingClient.Players to LoadBalancingMutableRoom
+	- added: LoadBalancingMutableRoom::getPlayerForNumber()
+
+
+*** version 3.0.0.0.RC4
+	Date: 01-30-2012
+	- fixed: iOS ARMv6 support
+	- changed: LoadBalancingPeer::opAuthenticate() now returns bool (true for success) instead of void
+	- changed: LoadBalancingPeer::oSetPropertiesOfPlayer() now returns bool (true for success) instead of void
+	- changed: LoadBalancingPeer::opSetPropertiesOfRoom() now returns bool (true for success) instead of void
+	- changed: LoadBalancingPeer::opAuthenticate() is now public instead of internal, however it remains internal in subclass LoadBalancingClient
+	- fixed: setter of LoadBalancingRoom.IsOpen
+	- fixed: setter of LoadBalancing.IsVisible
+	- added: LoadBalancingRoom:toString()
+	- added: LoadBalancingPlayer::toString()
+	- renamed: EventCode::GAME_LIST into ROOM_LIST
+	- renamed: EventCode::GAME_LIST_UPDATE into ROOM_LIST_UPDATE
+	- renamed: ParameterCode::GAME_LIST into ROOM_LIST
+	- renamed: LoadBalancingRoom.ID into Name
+	- renamed: LoadBalancingListener::joinGameEventAction() into joinRoomEventAction()
+	- renamed: LoadBalancingListener::leaveGameEventAction() into leaveRoomEventAction()
+	- renamed: LoadBalancingListener::createGameReturn() into createRoomReturn()
+	- renamed: LoadBalancingListener::joinGameReturn() into joinRoomReturn()
+	- renamed: LoadBalancingListener::joinRandomGameReturn() into joinRandomRoomReturn()
+	- renamed: LoadBalancingListener::leaveGameReturn() into leaveRoomReturn()
+	- renamed: ParameterCode::GAME_COUNT into ROOM_COUNT
+	- renamed: LoadBalancingClient.GameList into RoomList
+	- renamed: ParameterCode.GAME_ID into ROOM_NAME
+	- renamed: ParameterCode.ACTOR_PROPERTIES into PLAYER_PROPERTIES
+	- renamed: ParameterCode.GAME_PROPERTIES into ROOM_PROPERTIES
+	- fixed: setting of local players custom properties in various stuations
+	- added: optional parameter maxPlayers to LoadBalancingPeer::opJoinRandomRoom()
+	- renamed: LoadBalancingPeer::opLeaveGame() into opLeaveRoom()
+	- renamed: LoadBalancingPeer::opCreateGame() into opCreateRoom()
+	- renamed: LoadBalancingPeer::opJoinGame() into opJoinRoom()
+	- renamed: LoadBalancingPeer::opJoinRandomGame() into opJoinRandomRoom()
+	- renamed: LoadBalancingPeer::opLeaveGame() into opLeaveRoom()
+	- changed: debugLevel of general printout of every received event in LoadBalancingClient::onEvent() from DEBUG_LEVEL_INFO to DEBUG_LEVEL_ALL
+	- added: implementation for LoadBalancingRoom::hash()
+	- added: implementation for LoadBalancingPlayer::hash()
+	- fixed: implementation of LoadBalancingRoom::isEqual()
+	- fixed: implementation of LoadBalancingPlayer::isEqual()
+
+
+*** version 3.0.0.0.RC3
+	Date: 01-04-2012
+	- removed: parameter userID from init-functions
+	- added: new class LoadBalancingClient, subclassing class LoadBalancingPeer
+	- moved: all code from LoadBalancingPeer, which is not directly involved in creating an operation request, to LoadBalancingClient
+	- added: an overload for LoadBalancingPeer::opCreateGame() with just the gameID as parameter, setting isOpen and isVisible to true
+	- fixed: memory management of LoadBalancingClient.LocalActor.Name on leaving a game, which let to a crash, when entering one again
+	- fixed: the gameID from the master servers response to opJoinRandomGame() has to be stored, as it is needed for joining the room on the gameserver afterwards
+	- changed: debugOut in onStatusChanged() now has level "INFO" instead of "ALL" and does not include the outdated, redundant callbackname anymore
+	- fixed: reconnection to masterserver, coming back from a gameserver, did only work, if using the exitgamescloud
+	- added: OperationRequest debug out to LoadbalancingPeer::opAuthenticate()
+
+
+*** version 3.0.0.0.RC1
+	Date: 12-09-2011
+	- initial version of the LoadBalancing Objective C Library

@@ -1,0 +1,6 @@
+platform :ios, '7.0'
+inhibit_all_warnings!
+
+pre_install do |installer_representation|
+  # Do something fancy!
+end

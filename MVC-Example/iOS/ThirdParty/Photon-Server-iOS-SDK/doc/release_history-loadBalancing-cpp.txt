@@ -1,0 +1,165 @@
+* release_history-loadBalancing-objc.txt
+* Release history for the Exit Games LoadBalancing C++ Client Library
+
+(C) 2004-2013 Exit Games GmbH, http://www.exitgames.com
+
+Questions? Write to developer@exitgames.com or visit forum.exitgames.com
+
+
+*** version 3.2.5.0
+	Date: 09-27-2013
+	- changed: instances of Room, MutableRoom, Player and MutablePlayer now get constructed via factory functions, so that they can get subclassed by the app and the lib will then correctly create subclass instances - override MutableRoom:createPlayer() when subclassing Player, Client::getMutablePlayerFactory() + MutablePlayerFactory::create() + MutablePlayerFactory::destroy() when subclassing MutablePlayer, Client::createRoom() when subclassing Room and Client::getMutableRoomFactory() + MutableRoomFactory::create() + MutableRoomFactory::destroy() when subclassing MutableRoom
+	- moved: classes MutablePlayer and MutableRoom into their own files separated from their immutable base classes
+	- renamed: removed the project name prefix from all source and header files, in which it has been contained
+	- added: CustomAuthentication support
+	- fixed: setting player properties while being inside a room now actually works
+	- changed: MutableRoom::getPlayers() now returns a const Common::JVector<Player*>& instead of a const Common::JVector<Player>
+	- fixed: the entry for the local player in MutableRoom::getPlayers() now points directly to the same object, that also gets returned by Client::getLocalPlayer(), instead of holding a copy of that object, this avoids issues caused by missing synchronizations between two different copies
+	- fixed: Room::getPlayerCount() has not been working when called on an instance of Rooms subclass MutableRoom
+	- added: parameterless optional callback Listener::onFindFriendsResponse(), which gets called when a friend list fetching operation has been finished so that the app knows, when Client::getFriendList() will be able to successfully return the fetched values
+
+
+*** version 3.2.4.0
+	Date: 08-01-2013
+	- added: parameter playerNr to Listener::onPlayerPropertiesChange()
+
+
+*** version 3.2.3.2
+	Date: 07-26-2013
+	- fixed: entering or leaving rooms has erroneously erased the local players custom properties
+
+
+*** version 3.2.3.0
+	Date: 07-08-2013
+	- changed: the signature of Peer::opRaiseEvent(), which now accepts every type as payload that is supported by Photons serialization, including (multi-dimensional) arrays, custom types and so on
+	- changed: Peer::opRaiseEvent() doesn't provide different overloads for targetActorNumbers and eventCaching + ReceiverGroup anymore, but the first one doesn't rule out the other 2 anymore and vice versa, so if you are using these parameters, please adjust your calls to the changes in the parameter order
+
+
+*** version 3.2.2.0
+	Date: 05-06-2013
+	- fixed: player properties have not been updated correctly, if the received update data has just contained a single player
+	- added: optional callback Listener::onRoomListUpdate()
+	- added: optional callback Listener::onRoomPropertiesChange()
+	- added: optional callback Listener::onPlayerPropertiesChange()
+	- added: optional callback Listener::onAppStatsUpdate()
+	- removed: optional parameter customLocalPlayerProperties from Client::opCreateRoom(), Client::opJoinRoom() and Client::opJoinRandomRoom(); you should set custom local player properties through the reference that gets returned by Client::getLocalPlayer() instead
+	- moved: local player access from MutableRoom to Client, as this way its more obvious, that local player poperties are not affected by joining or leaving rooms, but can be set in and outside of rooms and don't get reseted when switching rooms
+	- added: Client::opFindFriends()
+	- added: Client::getFriendList()
+	- added: Client::gerFriendListAge()
+	- added: class FriendInfo
+	- added: Peer::opFindFriends()
+	- added: new optional parameter userID to Peer::opAuthenticate()
+	- fixed: the optional parameter targetActors of Peer::opRaiseEvent() is now const-correct
+
+
+*** version 3.2.0.0
+	Date: 02-25-2012
+	- optimized: all dynamic memory allocations now go through a custom memory manager, that is based on several memory pools, instead of direct calls to malloc/new/new[], internally these MemoryPools allocate chunks with increasing amounts of blocks per new nByte[]
+	- changed: Peer::Peer()'s first parameter from a non-const Photon::PhotonListener* to a const Photon::PhotonListener&
+	- changed: Listener now inherits from Common::BaseListener instead of Photon::PhotonBaseListener
+	- fixed: MutablePlayer::operator=() now behaves polymorphically correct
+	- fixed: MutableRoom::operator=() now behaves polymorphically correct
+	- fixed: when leaving a game, leaveRoomReturn() is now called, after v3.0.0.1 has introduced the bug that connectReturn() has accidentally been called instead
+
+
+*** version 3.0.4.3
+	Date: 01-14-2012
+	- fixed: Room::getPlayerCount() now returns correct values
+
+
+*** version 3.0.4.0
+	Date: 10-11-2012
+	- changed: removed the printout of the payload for received events in Client::onEvent(), as for events with a size of several kb stringifying the payload can get REALLY expensive
+	- changed: static classes ErrorCode, EventCode, JoinType, OperationCode, ParameterCode, Properties::Player and Properties::Room into being namespaces with the same name, so that their static const members are stored at an addressable memory location
+	- changed: after calling connectionErrorReturn() class Client will trigger a disconnect, if the client is not already disconnected or disconnecting, so that the app has not to call disconnect() itself anymore, before its able to reconnect in case of a connection error
+	- fixed: assignments between instances of MutablePlayer, that are referenced by or pointed to a Player& or Player* now work polymorphically correct
+	- fixed: assignments between instances of MutableRoom, that are referenced by or pointed to a Room& or Room* now work polymorphically correct
+	- fixed: Peer::opRaiseEventImplementation() showed undefined behavior, when the caller passed anything else than NULL and 0 for parameters targetPlayers and numTargetPlayers
+
+
+*** version 3.0.3.7
+	Date: 08-31-2012
+	- fixed: maxPlayers have not been passed to the gameserver, which lead into game rooms being created with the specified maxPlayers setting on the master-, but always with the default maxPlayers setting on the gameserver, therefor also filtering for maxPlayer in Client::opJoinRandomRoom() has not been working
+
+
+*** version 3.0.3.1
+	Date: 05-15-2012
+	- changed: the lib can now be used by apps, that are build with stlport, not only by the ones, which are using gnulibstdc++ anymore
+
+
+*** version 3.0.3.0
+	Date: 04-12-2012
+	- changed: the debugout at the start of Client::onEvent() now gets printed with debuglevel INFO, not with ALL anymore
+	- changed: the datatype of Client::opCreateRoom()'s recently added parameter "propsListedinLobby" from JVector<Object> to JVector<JString> 
+	- changed: the datatype of Room.mPropsListedinLobby and the according getter and setter from JVector<Object> to JVector<JString>
+	- fixed: made Listener's destructor virtual for correct cleanup logic
+	- removed: player properties from Peer::opJoinRandomRoom(), as it is only unneeded overhead to send them to server within this function, as it is only called for the master, but only the gameserver will actually react to them, so Peer:opJoinRoom() will (and has to) care about player properties for random rooms, too
+	- changed: Peer::opAuthenticate() now passes false for withTypes, when printing out the opRequest
+	- changed: Client::opCreateRoom() isn't sending room properties and list of props to show in lobby, anymore, when being called on master, to optimize bandwith usage, as only the gameserver will honor them, anyway
+	- fixed: Client::opCreateRoom() and Client::opJoinRoom have not been sending the custom local player properties at all
+	- changed: Client::onEvent() now passes false for withTypes, when printing out the event
+	- fixed: MutableRoom::removePlayer() now correctly reassigns the master client id, when the player to remove has been the master client
+
+
+*** version 3.0.2.1
+	Date: 03-22-2012
+	- removed: authentication timeout code, as do to server side improvements it is not needed anymore
+
+
+*** version 3.0.1.2
+	Date: 03-16-2012
+	- fixed: a bug, which has been triggering wrong encryption/authentication timeouts
+
+
+*** version 3.0.1.0
+	Date: 03-08-2012
+	- added: support for android ndk as new platform
+	- added: optional parameter propertiesListedInLobby to Client::opCreateRoom()
+	- addded: optional parameter customLocalPlayerProperties to Client::opJoinRandomRoom()
+	- added: optional parameter propertiesListedInLobby to Peer::opCreateRoom()
+	- addded: optional parameters customLocalPlayerProperties and playername to Peer::opJoinRandomRoom()
+	- changed: Player now inherits from Base
+	- changed: Room now inherits from Base
+	- added: MutablePlayer::getIsMasterClient()
+	- added: MutableRoom::getMasterClientID()
+	- added: MutableRoom::getPropsListedInLobby()
+	- added: MutableRoom:setPropsListedInLobby()
+	- changed: players now cleanup their server side event caches on leaving a room
+	- changed: subclasses of Room now print their own classname in toString(), not "Room" anymore
+	- changed: subclasses of Player now print their own classname in toString(), not "Player" anymore
+	- added: new members masterclientID and optional optionally propsPrintedInLobby are now included by the output of MutableRoom::toString()
+
+
+*** version 3.0.0.1
+	Date: 02-14-2012
+	- fixed: the autoJoinLobby flag has accidentally been ignored, when coming back from gameserver
+	- fixed: removing of rooms from the roomlist has not been working correctly
+
+
+*** version 3.0.0.0
+	Date: 02-09-2012
+	- added: additional flags to MutableRoom::toString() to print out the localPlayer and the list of players curently in the room
+	- changed: the return value of Client::getCurrentlyJoinedRoom() isn't const anymore, so you now can use the setters on it, like it is intended
+	- removed: MutablePlayer::setCustomProperties()
+	- added: MutablePlayer::mergeCustomProperties()
+	- added: MutablePlayer::addCustomProperty()
+	- added: MutablePlayer::addCustomProperties()
+	- added: MutablePlayer::removeCustomProperty()
+	- added: MutablePlayer::removeCustomProperties()
+	- removed: MutableRoom::setCustomProperties()
+	- added: MutableRoom::mergeCustomProperties()
+	- added: MutableRoom::addCustomProperty()
+	- added: MutableRoom::addCustomProperties()
+	- added: MutableRoom::removeCustomProperty()
+	- added: MutableRoom::removeCustomProperties()
+	- fixed: the name of local player has got messed up, when joining, leaving and rejoining a room
+	- moved: Client::getLocalPlayer() to MutableRoom
+	- moved: Client::getPlayers() to MutableRoom
+	- added: MutableRoom::getPlayerForNumber()
+	- changed: Room::addProperties() and Player::addProperties() are now virtual
+
+
+*** version 3.0.0.0.RC4
+	Date: 01-30-2012
+	- initial version of the LoadBalancing C++ Library

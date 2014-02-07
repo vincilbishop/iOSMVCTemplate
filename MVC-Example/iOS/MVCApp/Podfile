@@ -1,0 +1,90 @@
+platform :ios, '7.0'
+inhibit_all_warnings!
+
+workspace 'Proximity'
+
+xcodeproj 'Common/ProximityCommon/ProximityCommon.xcodeproj'
+xcodeproj 'Model/ProximityModel/ProximityModel.xcodeproj'
+xcodeproj 'Controller/ProximityController/ProximityController.xcodeproj'
+xcodeproj 'View/ProximityApp/ProximityApp.xcodeproj'
+
+# Build projects botton up in terms of dependency. i.e Common does not depend on the other projects, so build that first...
+
+# If you need to use a development pod that is not in the public podspec, and that is referenced by other podspecs (a big no-no in the cocoapods world)
+# Just make sure that these are referenced first in the Podfile so that cocoapods will look in the local development :path=> and not the public spec repo.
+
+# ---------- COMMON ----------
+target :ProximityCommon, exclusive: true do  
+	link_with 'ProximityCommon', :project => 'ProximityCommon'
+	
+	pod 'CocoaLumberjack'
+	pod 'LumberjackPrettyClassInformation'
+
+	target :ProximityCommonTests do
+	  link_with 'ProximityCommonTests', :project => 'ProximityCommon'
+	  pod 'OCMock', '~> 2.0.1'
+	  pod 'XCTAsyncTestCase'
+	end
+
+	xcodeproj 'Common/ProximityCommon/ProximityCommon.xcodeproj'
+end
+
+# ---------- Model ----------
+target :ProximityModel, exclusive: true do
+	link_with 'ProximityModel', :project => 'ProximityModel'
+    
+	
+	pod 'ProximityCommon', :path => 'Common/ProximityCommon'
+	pod 'CocoaLumberjack'
+    
+	target :ProximityModelTests do
+        link_with 'ProximityModelTests', :project => 'ProximityModel'
+        pod 'OCMock', '~> 2.0.1'
+        pod 'XCTAsyncTestCase'
+	end
+    
+	xcodeproj 'Model/ProximityModel/ProximityModel.xcodeproj'
+end
+
+# ---------- CONTROLLER ----------
+target :ProximityController, exclusive: true do
+	link_with 'ProximityController', :project => 'ProximityController'
+	
+	
+	pod 'ProximityCommon', :path => 'Common/ProximityCommon'
+	pod 'ProximityModel', :path => 'Model/ProximityModel'
+	
+	pod 'CocoaLumberjack'
+	pod 'LumberjackPrettyClassInformation'
+    
+	target :ProximityControllerTests do
+        link_with 'ProximityControllerTests', :project => 'ProximityController'
+        pod 'OCMock', '~> 2.0.1'
+        pod 'XCTAsyncTestCase'
+	end
+    
+	xcodeproj 'Controller/ProximityController/ProximityController.xcodeproj'
+end
+
+# ---------- VIEW ----------
+target :ProximityApp, exclusive: true do
+	link_with 'ProximityApp', :project => 'ProximityApp'
+	
+	pod 'PhotonServeriOS', :path => '../ThirdParty/Photon-Server-iOS-SDK/'
+	
+	pod 'ProximityCommon', :path => 'Common/ProximityCommon'
+	pod 'ProximityModel', :path => 'Model/ProximityModel'
+	pod 'ProximityController', :path => 'Controller/ProximityController'
+	
+	pod 'CocoaLumberjack'
+	pod 'LumberjackPrettyClassInformation'
+    
+	target :ProximityAppTests do
+		link_with 'ProximityAppTests', :project => 'ProximityApp'
+		pod 'OCMock', '~> 2.0.1'
+		pod 'XCTAsyncTestCase'
+	end
+    
+	xcodeproj 'View/ProximityApp/ProximityApp.xcodeproj'
+end
+
