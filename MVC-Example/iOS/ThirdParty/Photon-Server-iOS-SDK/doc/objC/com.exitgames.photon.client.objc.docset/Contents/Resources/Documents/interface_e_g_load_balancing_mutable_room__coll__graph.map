@@ -1,8 +1,0 @@
-<map id="EGLoadBalancingMutableRoom" name="EGLoadBalancingMutableRoom">
-<area shape="rect" id="node2" href="$interface_e_g_load_balancing_room.html" title="EGLoadBalancingRoom" alt="" coords="145,185,280,210"/>
-<area shape="rect" id="node3" href="$interface_e_g_base.html" title="EGBase" alt="" coords="69,84,129,108"/>
-<area shape="rect" id="node4" href="$class_n_s_object.html" title="NSObject" alt="" coords="67,6,133,31"/>
-<area shape="rect" id="node7" href="$class_n_s_string.html" title="NSString" alt="" coords="383,84,447,108"/>
-<area shape="rect" id="node9" href="$interface_e_g_array.html" title="EGArray" alt="" coords="502,185,564,210"/>
-<area shape="rect" id="node10" href="$class_n_s_array.html" title="NSArray" alt="" coords="572,84,633,108"/>
-</map>

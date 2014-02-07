@@ -1,6 +1,0 @@
-<map id="EGPhotonPeer" name="EGPhotonPeer">
-<area shape="rect" id="node3" href="$interface_e_g_lite_peer.html" title="EGLitePeer" alt="" coords="4,156,80,180"/>
-<area shape="rect" id="node4" href="$interface_e_g_load_balancing_peer.html" title="EGLoadBalancingPeer" alt="" coords="104,156,233,180"/>
-<area shape="rect" id="node2" href="$class_n_s_object.html" title="NSObject" alt="" coords="72,6,139,31"/>
-<area shape="rect" id="node5" href="$interface_e_g_load_balancing_client.html" title="EGLoadBalancingClient" alt="" coords="102,230,236,255"/>
-</map>

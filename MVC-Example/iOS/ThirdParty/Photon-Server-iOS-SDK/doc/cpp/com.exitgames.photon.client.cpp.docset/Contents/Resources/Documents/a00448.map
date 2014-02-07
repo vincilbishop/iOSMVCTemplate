@@ -1,6 +1,0 @@
-<map id="Client" name="Client">
-<area shape="rect" id="node2" href="$a00055.html" title="Peer" alt="" coords="25,81,68,106"/>
-<area shape="rect" id="node3" href="$a00057.html" title="PhotonPeer" alt="" coords="5,6,83,31"/>
-<area shape="rect" id="node4" href="$a00056.html" title="PhotonListener" alt="" coords="97,81,189,106"/>
-<area shape="rect" id="node5" href="$a00027.html" title="BaseListener" alt="" coords="106,6,189,31"/>
-</map>

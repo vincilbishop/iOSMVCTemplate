@@ -1,7 +1,0 @@
-<map id="EGLoadBalancingClient" name="EGLoadBalancingClient">
-<area shape="rect" id="node2" href="$interface_e_g_load_balancing_peer.html" title="EGLoadBalancingPeer" alt="" coords="4,156,133,180"/>
-<area shape="rect" id="node3" href="$interface_e_g_photon_peer.html" title="EGPhotonPeer" alt="" coords="23,81,115,106"/>
-<area shape="rect" id="node4" href="$class_n_s_object.html" title="NSObject" alt="" coords="36,6,103,31"/>
-<area shape="rect" id="node5" href="$protocol_e_g_photon_listener-p.html" title="\&lt;EGPhotonListener\&gt;" alt="" coords="158,156,279,180"/>
-<area shape="rect" id="node6" href="$protocol_e_g_base_listener-p.html" title="\&lt;EGBaseListener\&gt;" alt="" coords="163,81,273,106"/>
-</map>

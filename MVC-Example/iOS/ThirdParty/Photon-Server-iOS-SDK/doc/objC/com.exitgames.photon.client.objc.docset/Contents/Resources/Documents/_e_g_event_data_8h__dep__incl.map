@@ -1,9 +1,0 @@
-<map id="EGEventData.h" name="EGEventData.h">
-<area shape="rect" id="node5" href="$_e_g_photon_listener_8h.html" title="EGPhotonListener.h" alt="" coords="290,81,405,106"/>
-<area shape="rect" id="node6" href="$_e_g_photon_peer_8h.html" title="EGPhotonPeer.h" alt="" coords="321,156,423,180"/>
-<area shape="rect" id="node7" href="$_e_g_lite_peer_8h.html" title="EGLitePeer.h" alt="" coords="355,230,439,255"/>
-<area shape="rect" id="node10" href="$_e_g_load_balancing_peer_8h.html" title="EGLoadBalancingPeer.h" alt="" coords="464,230,601,255"/>
-<area shape="rect" id="node11" href="$_e_g_load_balancing_player_8h.html" title="EGLoadBalancingPlayer.h" alt="" coords="460,305,605,330"/>
-<area shape="rect" id="node12" href="$_e_g_load_balancing_room_8h.html" title="EGLoadBalancingRoom.h" alt="" coords="381,380,525,404"/>
-<area shape="rect" id="node13" href="$_e_g_load_balancing_client_8h.html" title="EGLoadBalancingClient.h" alt="" coords="212,460,355,484"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="BaseCharString" name="BaseCharString">
-<area shape="rect" id="node4" href="$a00023.html" title="ANSIString" alt="" coords="4,230,77,255"/>
-<area shape="rect" id="node5" href="$a00062.html" title="UTF8String" alt="" coords="102,230,177,255"/>
-<area shape="rect" id="node2" href="$a00025.html" title="Base" alt="" coords="68,81,113,106"/>
-<area shape="rect" id="node3" href="$a00061.html" title="ToString" alt="" coords="60,6,120,31"/>
-</map>
